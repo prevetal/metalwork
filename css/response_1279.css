@@ -4,6 +4,13 @@
     /*-------------------
         Global styles
     -------------------*/
+    :root
+    {
+        --font_size: 15px;
+        --font_size_title: 20px;
+    }
+
+
     html.custom_scroll ::-webkit-scrollbar
     {
         width: 5px;
@@ -25,52 +32,854 @@
     /*------------
         Header
     ------------*/
+    header .logo img
+    {
+        height: 32px;
+    }
 
 
+    header .menu_item + .menu_item
+    {
+        margin-left: 20px;
+    }
 
-    /*-------------
-        Sidebar
-    -------------*/
+
+    header .sub_menu
+    {
+        padding: 24px 40px 80px;
+    }
+
+    header .sub_menu:before
+    {
+        height: 26px;
+    }
 
 
+    header .email
+    {
+        margin-left: 40px;
+    }
 
-    /*---------------
-        Page head
-    ---------------*/
+
+    header .email .icon,
+    header .phone .icon
+    {
+        width: 20px;
+        height: 20px;
+        margin-right: 8px;
+    }
 
 
 
     /*----------------
         Block head
     ----------------*/
+    .block_head .desc
+    {
+        font-size: var(--font_size);
+    }
 
 
 
-    /*------------------
-        Form elements
-    ------------------*/
+    /*-------------------
+        First section
+    -------------------*/
+    .first_section .data
+    {
+        min-height: 380px;
+        padding: 48px 48px 48px 28px;
+    }
+
+
+    .first_section .title
+    {
+        font-size: var(--font_size_title);
+    }
+
+
+    .first_section .desc
+    {
+        font-size: var(--font_size);
+
+        margin-top: 20px;
+    }
+
+
+    .first_section .btn
+    {
+        margin-top: 48px;
+    }
 
 
 
     /*----------------
-        Typography
+        About head
     ----------------*/
+    .about_head
+    {
+        padding: 60px 24px;
+    }
+
+
+    .about_head .desc
+    {
+        font-size: var(--font_size);
+
+        width: 688px;
+    }
 
 
 
     /*-----------------
-        Main slider
+        Core Values
     -----------------*/
+    .core_values .item
+    {
+        padding-bottom: 30px;
+    }
+
+
+    .core_values .item .icon
+    {
+        margin-bottom: 20px;
+    }
+
+
+
+    /*----------------
+        Advantages
+    ----------------*/
+    .advantages .block_desc
+    {
+        font-size: var(--font_size);
+
+        width: 708px;
+        margin-bottom: 40px;
+    }
+
+
+    .advantages .item
+    {
+        padding: 19px 23px;
+    }
+
+
+    .advantages .item .icon
+    {
+        width: 100px;
+        height: 100px;
+    }
+
+
+    .advantages .item .icon + *
+    {
+        width: calc(100% - 120px);
+    }
+
+
+    .advantages .item .name
+    {
+        font-size: 16px;
+    }
+
+
+
+    /*--------------
+        Benefits
+    --------------*/
+    .benefits .block_title
+    {
+        margin-bottom: 40px;
+    }
+
+
+    .benefits .item,
+    .benefits .item.big
+    {
+        padding: 46px 14px 30px;
+    }
+
+
+    .benefits .item .name
+    {
+        font-size: 16px;
+    }
+
+
+
+    /*--------------
+        Services
+    --------------*/
+    .services .service .data
+    {
+        min-height: 320px;
+        padding: 22px;
+    }
+
+
+
+    /*-------------------
+        Why choose us
+    -------------------*/
+    .why_choose_us .head .title
+    {
+        width: calc(50% - 10px);
+    }
+
+
+    .why_choose_us .head .desc
+    {
+        padding: 16px 0 16px 20px;
+    }
+
+
+    .why_choose_us .head .link
+    {
+        margin-top: 24px;
+    }
+
+
+    .why_choose_us .row
+    {
+        margin-top: 30px;
+    }
+
+
+    .why_choose_us .item .info
+    {
+        padding: 20px;
+    }
+
+
+    .why_choose_us .item .name
+    {
+        font-size: 16px;
+    }
+
+
+    .why_choose_us .item .desc
+    {
+        margin-top: 16px;
+    }
+
+
+
+    /*--------------
+        Projects
+    --------------*/
+    .projects .project .data
+    {
+        padding: 60px 0;
+    }
+
+
+    .projects .project .link
+    {
+        margin-top: 40px;
+    }
+
+
+
+    /*--------------
+        Feedback
+    --------------*/
+    .feedback .item .photo
+    {
+        width: 220px;
+        height: 220px;
+    }
+
+
+    .feedback .item .data
+    {
+        width: calc(100% - 240px);
+    }
+
+
+    .feedback .item .name
+    {
+        font-size: 16px;
+    }
+
+
+
+    /*--------------
+        Articles
+    --------------*/
+    .articles .article .info
+    {
+        padding: 22px;
+    }
+
+
+    .articles .article .link
+    {
+        padding-top: 40px;
+    }
+
+
+
+    /*-------------------
+        Contacts info
+    -------------------*/
+    .contacts_info .data > * + *
+    {
+        margin-top: 30px;
+    }
+
+
+    .contacts_info .data .items
+    {
+        padding-left: 21px;
+    }
+
+
+    .contacts_info .data .item + .item
+    {
+        margin-top: 20px;
+    }
+
+
+    .contacts_info .data > .desc
+    {
+        font-size: var(--font_size);
+    }
+
+
+    .contacts_info .data .text
+    {
+        font-size: var(--font_size);
+
+        margin-top: 30px;
+        padding: 20px 24px;
+    }
+
+
+    .contacts_info .data ul li
+    {
+        font-size: var(--font_size);
+    }
+
+
+    .contacts_info .data ul li:before
+    {
+        top: 2px;
+    }
+
+
+    .contacts_info .feedback_form
+    {
+        padding: 30px;
+    }
+
+
+
+    /*-------------------
+        Category head
+    -------------------*/
+    .category_head
+    {
+        padding-top: 0;
+    }
+
+
+    .category_head .data
+    {
+        min-height: 320px;
+        padding: 32px 40px;
+    }
+
+
+    .category_head .icon
+    {
+        width: 48px;
+        height: 48px;
+    }
+
+
+    .category_head .name
+    {
+        font-size: 30px;
+    }
+
+
+    .category_head .desc
+    {
+        font-size: var(--font_size);
+    }
+
+
+    .category_head .link
+    {
+        margin-top: 30px;
+    }
+
+
+
+    /*-------------------
+        Category desc
+    -------------------*/
+    .category_desc .text .big
+    {
+        font-size: 24px;
+    }
+
+
+    .category_desc .text.small
+    {
+        font-size: var(--font_size);
+    }
+
+
+
+    /*-----------
+        Steps
+    -----------*/
+    .steps .row
+    {
+        margin-bottom: -40px;
+        margin-left: -80px;
+    }
+
+
+    .steps .row > *
+    {
+        width: calc(25% - 80px);
+        margin-bottom: 40px;
+        margin-left: 80px;
+    }
+
+
+
+    /*------------------
+        Action block
+    ------------------*/
+    .action_block .icon
+    {
+        width: 52px;
+        height: 52px;
+        margin-bottom: 24px;
+    }
+
+
+    .action_block .block_head.big_m
+    {
+        margin-bottom: 30px;
+    }
+
+
+    .action_block .desc
+    {
+        font-size: var(--font_size);
+    }
+
+
+    .action_block .link
+    {
+        margin-top: 30px;
+    }
+
+
+
+    /*------------------------
+        Approach to design
+    ------------------------*/
+    .approach_to_design .row .title
+    {
+        width: 400px;
+    }
+
+
+    .approach_to_design .row .desc
+    {
+        width: calc(100% - 420px);
+        padding: 16px 0 16px 24px;
+    }
+
+
+
+    /*-------------------
+        Why metalwork
+    -------------------*/
+    .why_metalwork .message
+    {
+        margin-bottom: 30px;
+        padding: 28px;
+    }
+
+
+    .why_metalwork .row .title
+    {
+        width: 400px;
+    }
+
+
+    .why_metalwork .row .desc
+    {
+        width: calc(100% - 420px);
+        padding: 8px 0 8px 24px;
+    }
+
+
+
+    /*-----------------
+        Dev process
+    -----------------*/
+    .dev_process .sub_title
+    {
+        margin-bottom: 30px;
+    }
+
+
+    .dev_process .item,
+    .dev_process .item.big
+    {
+        padding: 46px 14px 30px;
+    }
+
+
+    .dev_process .item .name
+    {
+        font-size: 16px;
+    }
+
+
+    .dev_process .message
+    {
+        margin-top: 30px;
+        padding: 28px;
+    }
+
+
+
+    /*--------------------------
+        Industry application
+    --------------------------*/
+    .industry_application .desc
+    {
+        font-size: var(--font_size);
+    }
+
+
+
+    /*----------------
+        Contact us
+    ----------------*/
+    .contact_us .desc
+    {
+        font-size: var(--font_size);
+    }
+
+
+
+    /*------------------------
+        Transport fixtures
+    ------------------------*/
+    .transport_fixtures .row .title
+    {
+        width: 400px;
+    }
+
+
+    .transport_fixtures .row .desc
+    {
+        width: calc(100% - 420px);
+        padding: 16px 0 16px 24px;
+    }
+
+
+
+    /*----------------
+        Info block
+    ----------------*/
+    .info_block .data
+    {
+        width: calc(50% - 10px);
+    }
+
+
+    .info_block .text .big
+    {
+        font-size: 16px;
+
+        margin-bottom: 30px;
+    }
+
+
+
+    /*-----------------------
+        Reliable clamping
+    -----------------------*/
+    .reliable_clamping .row .title
+    {
+        width: 400px;
+    }
+
+
+    .reliable_clamping .row .desc
+    {
+        width: calc(100% - 420px);
+        padding: 8px 0 8px 24px;
+    }
+
+
+
+    /*-----------------------
+        Quality standards
+    -----------------------*/
+    .quality_standards .item
+    {
+        padding: 46px 14px 30px;
+    }
+
+
+    .quality_standards .item .name
+    {
+        font-size: 16px;
+    }
+
+
+    .quality_standards .message
+    {
+        margin-top: 30px;
+        padding: 28px;
+    }
+
+
+
+    /*-------------------------------------
+        Optimizing production processes
+    -------------------------------------*/
+    .optimizing_production_processes .row .title
+    {
+        width: 400px;
+    }
+
+
+    .optimizing_production_processes .row .desc
+    {
+        width: calc(100% - 420px);
+        padding: 16px 0 16px 24px;
+    }
+
+
+
+    /*------------------------------
+        Machine tooling fixtures
+    ------------------------------*/
+    .machine_tooling_fixtures .info
+    {
+        padding: 28px 24px;
+    }
+
+
+    .machine_tooling_fixtures .info .title
+    {
+        width: 400px;
+    }
+
+
+    .machine_tooling_fixtures .info .desc
+    {
+        width: calc(100% - 420px);
+        padding: 0 0 0 24px;
+    }
+
+
+    .machine_tooling_fixtures .row
+    {
+        margin-top: 40px;
+    }
+
+
+    .machine_tooling_fixtures .item
+    {
+        padding: 46px 14px 30px;
+    }
+
+
+
+    /*----------------------------
+        Why our service better
+    ----------------------------*/
+    .why_our_service_better .data ul li
+    {
+        font-size: var(--font_size);
+    }
+
+
+    .why_our_service_better .data ul li:before
+    {
+        top: 2px;
+    }
+
+
+    .why_our_service_better .data > .desc
+    {
+        font-size: var(--font_size);
+
+        margin-top: 30px;
+    }
+
+
+
+    /*---------------------
+        Service support
+    ---------------------*/
+    .service_support .row .title
+    {
+        width: 400px;
+    }
+
+
+    .service_support .row .desc
+    {
+        width: calc(100% - 420px);
+        padding: 8px 0 8px 24px;
+    }
+
+
+
+    /*---------------------------
+        Fixtures divided into
+    ---------------------------*/
+    .fixtures_divided_into ul li
+    {
+        font-size: var(--font_size);
+    }
+
+
+    .fixtures_divided_into .data ul li:before
+    {
+        top: 2px;
+    }
+
+
+
+    /*--------------------------------
+        Universal milling fixtures
+    --------------------------------*/
+    .universal_milling_fixtures .sub_title
+    {
+        margin-bottom: 30px;
+    }
+
+
+    .universal_milling_fixtures .item
+    {
+        padding: 46px 14px 30px;
+    }
+
+
+    .universal_milling_fixtures .message
+    {
+        margin-top: 30px;
+        padding: 28px;
+    }
+
+
+
+    /*-----------------
+        Custom cams
+    -----------------*/
+    .custom_cams .row
+    {
+        margin-top: 40px;
+    }
+
+
+    .custom_cams .item .name
+    {
+        font-size: 16px;
+    }
+
+
+    .custom_cams .item .info
+    {
+        padding: 24px 20px;
+    }
+
+
+    .custom_cams .item .label
+    {
+        font-size: 16px;
+    }
+
+
+
+    /*---------------------------
+        Optimizing production
+    ---------------------------*/
+    .optimized_production .row .title
+    {
+        width: 400px;
+    }
+
+
+    .optimized_production .row .desc
+    {
+        width: calc(100% - 420px);
+        padding: 16px 0 16px 24px;
+    }
+
+
+
+    /*----------------------------
+        Ordering customization
+    ----------------------------*/
+    .ordering_customization .desc
+    {
+        font-size: var(--font_size);
+    }
+
+
+
+    /*----------------
+        Guarantees
+    ----------------*/
+    .guarantees .desc
+    {
+        font-size: var(--font_size);
+    }
+
+
+    .guarantees .row
+    {
+        margin-top: 40px;
+    }
+
+
+    .guarantees .item
+    {
+        padding: 24px 20px;
+    }
+
+
+
+    /*----------------
+        About info
+    ----------------*/
+    .about_info .desc
+    {
+        font-size: var(--font_size);
+
+        margin-top: 30px;
+    }
+
+
+    .about_info .text
+    {
+        margin-top: 30px;
+        padding: 24px 20px;
+    }
 
 
 
     /*------------
         Footer
     ------------*/
-
-
-
-    /*-----------
-        PopUp
-    -----------*/
+    footer .logo img
+    {
+        height: 44px;
+    }
 }

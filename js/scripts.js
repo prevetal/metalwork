@@ -55,22 +55,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 	// Mob. menu
-	$('.mob_header .mob_menu_btn').click((e) => {
+	$('.mob_header .mob_menu_btn, .mob_menu .close_btn').click((e) => {
 		e.preventDefault()
 
-		$('.mob_header .mob_menu_btn').addClass('active')
-		$('body').addClass('menu_open')
-		$('header').addClass('show')
-		$('.overlay').fadeIn(300)
-	})
-
-	$('header > .close, .overlay').click((e) => {
-		e.preventDefault()
-
-		$('.mob_header .mob_menu_btn').removeClass('active')
-		$('body').removeClass('menu_open')
-		$('header').removeClass('show')
-		$('.overlay').fadeOut(300)
+		$('.mob_header .mob_menu_btn').toggleClass('active')
+		$('body').toggleClass('menu_open')
+		$('.mob_menu').toggleClass('show')
 	})
 
 
@@ -146,23 +136,5 @@ window.addEventListener('resize', function () {
 	if (typeof WW !== 'undefined' && WW != windowW) {
 		// Overwrite window width
 		WW = window.innerWidth || document.clientWidth || BODY.clientWidth
-
-
-		// Mob. version
-		if (!fakeResize) {
-			fakeResize = true
-			fakeResize2 = false
-
-			document.getElementsByTagName('meta')['viewport'].content = 'width=device-width, initial-scale=1, maximum-scale=1'
-		}
-
-		if (!fakeResize2) {
-			fakeResize2 = true
-
-			if (windowW < 375) document.getElementsByTagName('meta')['viewport'].content = 'width=375, user-scalable=no'
-		} else {
-			fakeResize = false
-			fakeResize2 = true
-		}
 	}
 })

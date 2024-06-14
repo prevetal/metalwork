@@ -4,6 +4,22 @@
     /*-------------------
         Global styles
     -------------------*/
+    :root
+    {
+        --font_size: 14px;
+        --font_size_title: 18px;
+    }
+
+
+    .swiper-button-next
+    {
+        right: 12px;
+    }
+
+    .swiper-button-prev
+    {
+        left: 12px;
+    }
 
 
 
@@ -17,57 +33,22 @@
 
 
 
+    /*---------------
+        Accordion
+    ---------------*/
+    .accordion
+    {
+        width: 100%;
+    }
+
+
+
     /*------------
         Header
     ------------*/
     header
     {
-        position: fixed;
-        z-index: 101;
-        top: 0;
-        left: 0;
-
-        width: 310px;
-        height: 100%;
-        min-height: -moz-available;
-        min-height: -webkit-fill-available;
-        min-height:         fill-available;
-        margin: 0;
-        padding: 0;
-
-        transition: transform .3s linear;
-        transform: translateX(-100%);
-
-        background: #fff;
-    }
-
-    header.show
-    {
-        transform: translateX(0);
-    }
-
-
-    header .scroll
-    {
-        display: flex;
-        overflow: auto;
-        align-content: flex-start;
-        align-items: flex-start;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-
-        height: 100%;
-        min-height: -moz-available;
-        min-height: -webkit-fill-available;
-        min-height:         fill-available;
-        padding: 20px 0;
-
-        overscroll-behavior-y: contain;
-    }
-
-    header .scroll > *
-    {
-        width: 100%;
+        display: none;
     }
 
 
@@ -82,49 +63,788 @@
 
 
 
-    /*-------------
-        Sidebar
-    -------------*/
-
-
-
-    /*---------------
-        Page head
-    ---------------*/
-
-
-
     /*----------------
         Block head
     ----------------*/
+    .block_head.big_m
+    {
+        margin-bottom: 30px;
+    }
+
+
+    .block_head .title
+    {
+        line-height: 20px;
+    }
 
 
 
-    /*------------------
-        Form elements
-    ------------------*/
+    /*-------------------
+        First section
+    -------------------*/
+    .first_section .data
+    {
+        min-height: 320px;
+        padding: 48px 24px;
+    }
+
+
+    .first_section .btn
+    {
+        font-size: var(--font_size);
+
+        margin-top: 40px;
+    }
 
 
 
     /*----------------
-        Typography
+        About head
     ----------------*/
+    .about_head
+    {
+        padding: 48px 24px;
+    }
 
 
 
     /*-----------------
-        Main slider
+        Core Values
     -----------------*/
+    .core_values .item .icon
+    {
+        margin-bottom: 16px;
+    }
+
+
+    .core_values .item .desc
+    {
+        font-size: var(--font_size);
+    }
+
+
+
+    /*----------------
+        Advantages
+    ----------------*/
+    .advantages .block_title
+    {
+        margin-bottom: 30px;
+    }
+
+
+    .advantages .block_desc
+    {
+        margin-bottom: 32px;
+    }
+
+
+    .advantages .item
+    {
+        padding: 19px;
+    }
+
+
+    .advantages .item .icon
+    {
+        display: none;
+    }
+
+
+    .advantages .item .icon + *
+    {
+        width: 100%;
+    }
+
+
+    .advantages .item .desc
+    {
+        font-size: var(--font_size);
+    }
+
+
+    .advantages .item.action,
+    .advantages .item.action .link a
+    {
+        font-size: var(--font_size);
+    }
+
+
+
+    /*--------------
+        Benefits
+    --------------*/
+    .benefits .block_title
+    {
+        margin-bottom: 30px;
+    }
+
+
+    .benefits .row > *,
+    .benefits .row > *.big
+    {
+        width: calc(50% - 20px);
+    }
+
+
+    .benefits .item .desc
+    {
+        font-size: var(--font_size);
+    }
+
+
+
+    /*--------------
+        Services
+    --------------*/
+    .services .service .desc
+    {
+        font-size: var(--font_size);
+    }
+
+
+    .services .service .link
+    {
+        padding-top: 30px;
+    }
+
+
+    .services .service .link a
+    {
+        font-size: var(--font_size);
+    }
+
+
+
+    /*-------------------
+        Why choose us
+    -------------------*/
+    .why_choose_us .head .desc
+    {
+        padding: 12px 0 12px 16px;
+    }
+
+
+    .why_choose_us .head .link
+    {
+        margin-top: 20px;
+    }
+
+
+    .why_choose_us .head .link a
+    {
+        font-size: var(--font_size);
+    }
+
+
+    .why_choose_us .row > *
+    {
+        width: calc(50% - 20px);
+    }
+
+
+    .why_choose_us .item .desc
+    {
+        font-size: var(--font_size);
+    }
+
+
+
+    /*--------------
+        Feedback
+    --------------*/
+    .feedback .item .photo
+    {
+        width: 140px;
+        height: 140px;
+        margin: 0 auto 20px;
+    }
+
+
+    .feedback .item .data
+    {
+        width: 100%;
+    }
+
+
+    .feedback .item .desc
+    {
+        font-size: var(--font_size);
+    }
+
+
+
+    /*--------------
+        Articles
+    --------------*/
+    .articles .article .link
+    {
+        padding-top: 30px;
+    }
+
+
+
+    /*-------------------
+        Contacts info
+    -------------------*/
+    .contacts_info .data .items
+    {
+        padding-left: 18px;
+    }
+
+
+    .contacts_info .feedback_form
+    {
+        padding: 22px;
+    }
+
+
+
+    /*-------------------
+        Category head
+    -------------------*/
+    .category_head .data
+    {
+        min-height: 260px;
+        padding: 28px;
+    }
+
+
+    .category_head .data .col + .col
+    {
+        padding-left: 20px;
+    }
+
+
+    .category_head .icon
+    {
+        width: 44px;
+        height: 44px;
+        margin-bottom: 16px;
+    }
+
+
+    .category_head .name
+    {
+        font-size: 26px;
+
+        width: 100%;
+    }
+
+
+    .category_head .link
+    {
+        margin-top: 24px;
+    }
+
+
+    .category_head .link a
+    {
+        font-size: var(--font_size);
+    }
+
+
+    .category_head .small_desc
+    {
+        font-size: var(--font_size);
+    }
+
+
+
+    /*-------------------
+        Category desc
+    -------------------*/
+    .category_desc .text .big
+    {
+        font-size: 22px;
+    }
+
+
+
+    /*-----------
+        Steps
+    -----------*/
+    .steps .row
+    {
+        margin-bottom: -30px;
+        margin-left: -30px;
+    }
+
+
+    .steps .row > *
+    {
+        width: calc(33.333% - 30px);
+        margin-bottom: 30px;
+        margin-left: 30px;
+    }
+
+
+    .steps .step .desc
+    {
+        font-size: var(--font_size);
+    }
+
+
+
+    /*-------------
+        Clients
+    -------------*/
+    .clients .row
+    {
+        justify-content: center;
+
+        margin-bottom: -20px;
+        margin-left: -20px;
+    }
+
+
+    .clients .row > *
+    {
+        width: calc(20% - 20px);
+        margin-bottom: 20px;
+        margin-left: 20px;
+    }
+
+
+    .clients .item
+    {
+        height: 80px;
+    }
+
+
+
+    /*------------------
+        Action block
+    ------------------*/
+    .action_block .icon
+    {
+        width: 44px;
+        height: 44px;
+    }
+
+
+    .action_block .link a
+    {
+        font-size: var(--font_size);
+    }
+
+
+    .action_block .desc
+    {
+        margin-top: 20px;
+    }
+
+
+
+    /*--------------
+        Projects
+    --------------*/
+    .projects .project .link
+    {
+        margin-top: 30px;
+    }
+
+
+    .projects .project .link a
+    {
+        font-size: var(--font_size);
+    }
+
+
+
+    /*------------------------
+        Approach to design
+    ------------------------*/
+    .approach_to_design .row .title
+    {
+        width: 324px;
+    }
+
+
+    .approach_to_design .row .desc
+    {
+        width: calc(100% - 344px);
+        padding: 12px 0 12px 20px;
+    }
+
+
+
+    /*-------------------
+        Why metalwork
+    -------------------*/
+    .why_metalwork .message
+    {
+        padding: 24px;
+    }
+
+
+    .why_metalwork .message .icon
+    {
+        width: 80px;
+        height: 80px;
+    }
+
+
+    .why_metalwork .message .icon + *
+    {
+        width: calc(100% - 120px);
+    }
+
+
+    .why_metalwork .row .title
+    {
+        width: 324px;
+    }
+
+
+    .why_metalwork .row .desc
+    {
+        width: calc(100% - 344px);
+        padding: 8px 0 8px 20px;
+    }
+
+
+
+    /*-----------------
+        Dev process
+    -----------------*/
+    .dev_process .row > *,
+    .dev_process .row > *.big
+    {
+        width: calc(50% - 20px);
+    }
+
+
+    .dev_process .item + .item:before
+    {
+        display: none;
+    }
+
+
+    .dev_process .item .desc
+    {
+        font-size: var(--font_size);
+    }
+
+
+    .dev_process .message
+    {
+        padding: 24px;
+    }
+
+
+    .dev_process .message .icon
+    {
+        width: 80px;
+        height: 80px;
+    }
+
+
+    .dev_process .message .icon + *
+    {
+        width: calc(100% - 120px);
+    }
+
+
+
+    /*----------------
+        Contact us
+    ----------------*/
+    .contact_us .link a
+    {
+        font-size: var(--font_size);
+    }
+
+
+
+    /*------------------------
+        Transport fixtures
+    ------------------------*/
+    .transport_fixtures .row .title
+    {
+        width: 324px;
+    }
+
+
+    .transport_fixtures .row .desc
+    {
+        width: calc(100% - 344px);
+        padding: 12px 0 12px 20px;
+    }
+
+
+
+    /*---------
+        FAQ
+    ---------*/
+    .FAQ .add_btn
+    {
+        font-size: var(--font_size);
+    }
+
+
+
+    /*-----------------------
+        Reliable clamping
+    -----------------------*/
+    .reliable_clamping .row .title
+    {
+        width: 324px;
+    }
+
+
+    .reliable_clamping .row .desc
+    {
+        width: calc(100% - 344px);
+        padding: 8px 0 8px 20px;
+    }
+
+
+
+    /*-----------------------
+        Quality standards
+    -----------------------*/
+    .quality_standards .row > *
+    {
+        width: calc(33.333% - 20px);
+    }
+
+
+
+    .quality_standards .item .desc
+    {
+        font-size: var(--font_size);
+    }
+
+
+    .quality_standards .message
+    {
+        padding: 24px;
+    }
+
+
+    .quality_standards .message .icon
+    {
+        width: 80px;
+        height: 80px;
+    }
+
+
+    .quality_standards .message .icon + *
+    {
+        width: calc(100% - 120px);
+    }
+
+
+
+    /*-------------------------------------
+        Optimizing production processes
+    -------------------------------------*/
+    .optimizing_production_processes .row .title
+    {
+        width: 324px;
+    }
+
+
+    .optimizing_production_processes .row .desc
+    {
+        width: calc(100% - 344px);
+        padding: 12px 0 12px 20px;
+    }
+
+
+
+    /*------------------------------
+        Machine tooling fixtures
+    ------------------------------*/
+    .machine_tooling_fixtures .info
+    {
+        padding: 24px;
+    }
+
+
+    .machine_tooling_fixtures .info .title
+    {
+        font-size: var(--font_size_title);
+
+        width: 324px;
+    }
+
+
+    .machine_tooling_fixtures .info .desc
+    {
+        width: calc(100% - 344px);
+        padding: 0 0 0 20px;
+    }
+
+
+    .machine_tooling_fixtures .row
+    {
+        margin-top: 30px;
+    }
+
+
+    .machine_tooling_fixtures .row > *
+    {
+        width: calc(33.333% - 20px);
+    }
+
+
+    .machine_tooling_fixtures .item
+    {
+        min-height: 180px;
+    }
+
+
+    .machine_tooling_fixtures .item .desc
+    {
+        font-size: var(--font_size);
+    }
+
+
+
+    /*---------------------
+        Service support
+    ---------------------*/
+    .service_support .row .title
+    {
+        width: 324px;
+    }
+
+
+    .service_support .row .desc
+    {
+        width: calc(100% - 344px);
+        padding: 8px 0 8px 20px;
+    }
+
+
+
+    /*--------------------------------
+        Universal milling fixtures
+    --------------------------------*/
+    .universal_milling_fixtures .sub_title
+    {
+        margin-bottom: 30px;
+    }
+
+
+    .universal_milling_fixtures .item .desc
+    {
+        font-size: var(--font_size);
+    }
+
+
+    .universal_milling_fixtures .message
+    {
+        padding: 24px;
+    }
+
+
+    .universal_milling_fixtures .message .icon
+    {
+        width: 80px;
+        height: 80px;
+    }
+
+
+    .universal_milling_fixtures .message .icon + *
+    {
+        width: calc(100% - 120px);
+    }
+
+
+
+    /*-----------------
+        Custom cams
+    -----------------*/
+    .custom_cams .row
+    {
+        margin-top: 30px;
+    }
+
+
+    .custom_cams .item .name
+    {
+        font-size: 14px;
+    }
+
+
+    .custom_cams .item .info
+    {
+        padding: 20px;
+    }
+
+
+    .custom_cams .item .info > * + *
+    {
+        margin-top: 30px;
+    }
+
+
+    .custom_cams .item .label
+    {
+        font-size: 14px;
+    }
+
+
+    .custom_cams .item .desc
+    {
+        font-size: var(--font_size);
+    }
+
+
+
+    /*---------------------------
+        Optimizing production
+    ---------------------------*/
+    .optimized_production .row .title
+    {
+        width: 324px;
+    }
+
+
+    .optimized_production .row .desc
+    {
+        width: calc(100% - 344px);
+        padding: 12px 0 12px 20px;
+    }
+
+
+
+    /*----------------
+        Guarantees
+    ----------------*/
+    .guarantees .row
+    {
+        margin-top: 30px;
+    }
+
+
+    .guarantees .item
+    {
+        font-size: var(--font_size);
+
+        padding: 20px;
+    }
+
+
+
+    /*----------------
+        About info
+    ----------------*/
+    .about_info .text
+    {
+        padding: 20px;
+    }
 
 
 
     /*------------
         Footer
     ------------*/
-
-
-
-    /*-----------
-        PopUp
-    -----------*/
+    footer .row > *
+    {
+        width: calc(50% - 20px);
+    }
 }

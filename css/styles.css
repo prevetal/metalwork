@@ -191,7 +191,6 @@ button
     overflow: clip;
     flex-direction: column;
 
-    min-width: 375px;
     min-height: 100%;
 
     background: var(--bg);
@@ -348,54 +347,6 @@ header
     padding-top: 60px;
     padding-bottom: 20px;
 }
-
-
-
-header .mob_close_btn
-{
-    position: absolute;
-    top: 0;
-    left: 100%;
-
-    display: none;
-
-    width: 50px;
-    height: 50px;
-}
-
-
-header .mob_close_btn:before,
-header .mob_close_btn:after
-{
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-
-    display: block;
-
-    width: 50%;
-    height: 2px;
-    margin: auto;
-
-    content: '';
-    transform: rotate(45deg);
-
-    background: #fff;
-}
-
-header .mob_close_btn:after
-{
-    transform: rotate(-45deg);
-}
-
-
-header.show .mob_close_btn
-{
-    display: block;
-}
-
 
 
 header .cont
@@ -673,14 +624,17 @@ header .phone .icon
 .mob_header
 {
     position: relative;
-    z-index: 9;
+    z-index: 11;
     top: 0;
     left: 0;
 
     display: none;
 
     width: 100%;
-    padding: 16px 0;
+    padding-top: 60px;
+    padding-bottom: 20px;
+
+    background: var(--bg);
 }
 
 
@@ -704,9 +658,12 @@ header .phone .icon
     color: currentColor;
 }
 
+
 .mob_header .logo img
 {
     display: block;
+
+    height: 40px;
 }
 
 
@@ -719,48 +676,114 @@ header .phone .icon
     flex-wrap: wrap;
     justify-content: center;
 
-    width: 44px;
-    height: 34px;
-    margin-right: -8px;
-    margin-left: 24px;
-    padding: 8px;
+    width: 25px;
+    height: 25px;
+}
+
+
+.mob_header .mob_menu_btn svg
+{
+    display: block;
+
+    width: 25px;
+    height: 25px;
+}
+
+.mob_header .mob_menu_btn svg + svg
+{
+    display: none;
+}
+
+
+.mob_header .mob_menu_btn.active svg
+{
+    display: none;
+}
+
+.mob_header .mob_menu_btn.active svg + svg
+{
+    display: block;
+}
+
+
+
+/*---------------
+    Mob. menu
+---------------*/
+.mob_menu
+{
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    right: 100%;
+
+    width: 100%;
+    height: 100%;
+    min-height: -moz-available;
+    min-height: -webkit-fill-available;
+    min-height:         fill-available;
+    padding-top: 126px;
+
+    transition: transform .3s linear;
+
+    background: var(--bg);
+}
+
+.mob_menu.show
+{
+    transform: translateX(100%);
+}
+
+
+.mob_menu .scroll
+{
+    overflow: auto;
+
+    height: 100%;
+    min-height: -moz-available;
+    min-height: -webkit-fill-available;
+    min-height:         fill-available;
+    padding-bottom: 60px;
+
+    overscroll-behavior-y: contain;
+}
+
+
+.mob_menu .links > * + *
+{
+    margin-top: 22px;
+}
+
+
+.mob_menu .links a
+{
+    font-size: 16px;
+    font-weight: 600;
+
+    display: inline-block;
+
+    vertical-align: top;
+    text-decoration: none;
 
     color: currentColor;
 }
 
 
-.mob_header .mob_menu_btn span
+.mob_menu .links .sub
 {
-    position: relative;
-
-    display: block;
-
-    width: 100%;
-    height: 2px;
-
-    background: currentColor;
+    margin-top: 22px;
 }
 
-.mob_header .mob_menu_btn span:before,
-.mob_header .mob_menu_btn span:after
+
+.mob_menu .links .sub > * + *
 {
-    position: absolute;
-    top: -8px;
-    left: 0;
-
-    display: block;
-
-    width: 100%;
-    height: 100%;
-
-    content: '';
-
-    background: currentColor;
+    margin-top: 7px;
 }
 
-.mob_header .mob_menu_btn span:after
+
+.mob_menu .links .sub a
 {
-    top: 8px;
+    font-weight: 300;
 }
 
 
@@ -3245,7 +3268,8 @@ header .phone .icon
     font-size: var(--font_size_title);
     font-weight: 600;
 
-    width: calc(50% - 10px);
+    width: 610px;
+    max-width: 100%;
 }
 
 
@@ -3254,7 +3278,8 @@ header .phone .icon
     font-size: 18px;
     font-weight: 300;
 
-    width: calc(50% - 10px);
+    width: 610px;
+    max-width: 100%;
     margin-top: 24px;
 }
 
