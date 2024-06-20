@@ -971,8 +971,15 @@ header .phone .icon
 
     padding: 10px 14px;
 
+    transition: background .2s linear;
+
     color: #fff;
     background: #00a0e4;
+}
+
+.form .submit_btn:hover
+{
+    background: #580be4;
 }
 
 
@@ -1032,8 +1039,15 @@ header .phone .icon
     margin-top: 55px;
     padding: 10px 14px;
 
+    transition: background .2s linear;
+
     color: #fff;
     background: #00a0e4;
+}
+
+.first_section .btn:hover
+{
+    background: #580be4;
 }
 
 
@@ -1384,11 +1398,17 @@ header .phone .icon
 
     padding: 10px 14px;
 
+    transition: background .2s linear;
     vertical-align: top;
     text-decoration: none;
 
     color: currentColor;
     background: #00a0e4;
+}
+
+.advantages .item.action .link a:hover
+{
+    background: #580be4;
 }
 
 
@@ -1449,6 +1469,9 @@ header .phone .icon
 
 .benefits .item.big
 {
+    align-content: flex-start;
+    align-items: flex-start;
+
     padding-top: 60px;
     padding-bottom: 43px;
 }
@@ -1588,11 +1611,17 @@ header .phone .icon
 
     padding-bottom: 7px;
 
+    transition: color .2s linear;
     vertical-align: top;
     text-decoration: none;
 
     color: currentColor;
     border-bottom: 3px solid #00a0e4;
+}
+
+.services .service .link a:hover
+{
+    color: #580be4;
 }
 
 
@@ -1683,11 +1712,17 @@ header .phone .icon
 
     padding: 10px 14px;
 
+    transition: background .2s linear;
     vertical-align: top;
     text-decoration: none;
 
     color: #fff;
     background: #00a0e4;
+}
+
+.why_choose_us .head .link a:hover
+{
+    background: #580be4;
 }
 
 
@@ -1834,6 +1869,7 @@ header .phone .icon
 
     padding-bottom: 7px;
 
+    transition: color .2s linear;
     vertical-align: top;
     text-decoration: none;
 
@@ -1841,14 +1877,26 @@ header .phone .icon
     border-bottom: 3px solid #00a0e4;
 }
 
+.projects .project .link a:hover
+{
+    color: #580be4;
+}
+
 
 .projects .project .link a.btn
 {
     padding: 10px 14px;
 
+    transition: background .2s linear;
+
     color: #fff;
     border: none;
     background: #00a0e4;
+}
+
+.projects .project .link a.btn:hover
+{
+    background: #580be4;
 }
 
 
@@ -2093,11 +2141,17 @@ header .phone .icon
 
     padding-bottom: 7px;
 
+    transition: color .2s linear;
     vertical-align: top;
     text-decoration: none;
 
     color: currentColor;
     border-bottom: 3px solid #00a0e4;
+}
+
+.articles .article .link a:hover
+{
+    color: #580be4;
 }
 
 
@@ -2444,11 +2498,17 @@ header .phone .icon
 
     padding: 10px 14px;
 
+    transition: background .2s linear;
     vertical-align: top;
     text-decoration: none;
 
     color: currentColor;
     background: #00a0e4;
+}
+
+.category_head .link a:hover
+{
+    background: #580be4;
 }
 
 
@@ -2827,9 +2887,16 @@ header .phone .icon
 {
     padding: 10px 14px;
 
+    transition: background .2s linear;
+
     color: #fff;
     border: none;
     background: #00a0e4;
+}
+
+.action_block .link a.btn:hover
+{
+    background: #580be4;
 }
 
 
@@ -2842,6 +2909,7 @@ header .phone .icon
     display: block;
 
     width: calc(50% - 10px);
+    min-width: 200px;
     height: 100%;
 
     pointer-events: none;
@@ -3298,11 +3366,17 @@ header .phone .icon
 
     padding: 10px 14px;
 
+    transition: background .2s linear;
     vertical-align: top;
     text-decoration: none;
 
     color: currentColor;
     background: #00a0e4;
+}
+
+.contact_us .link a:hover
+{
+    background: #580be4;
 }
 
 
@@ -3335,11 +3409,17 @@ header .phone .icon
     margin-top: 30px;
     padding: 10px 14px;
 
+    transition: background .2s linear;
     vertical-align: top;
     text-decoration: none;
 
     color: #fff;
     background: #00a0e4;
+}
+
+.FAQ .add_btn:hover
+{
+    background: #580be4;
 }
 
 
