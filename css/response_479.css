@@ -47,6 +47,37 @@
 
 
 
+    /*---------------
+        Page head
+    ---------------*/
+    .page_head .data
+    {
+        min-height: 206px;
+        padding: 24px 10px;
+    }
+
+
+    .page_head .icon
+    {
+        width: 24px;
+        height: 24px;
+        margin-bottom: 12px;
+    }
+
+
+    .page_head .name
+    {
+        font-size: var(--font_size_title);
+    }
+
+
+    .page_head .data .col + .col
+    {
+        padding-left: 13px;
+    }
+
+
+
     /*----------------
         Block head
     ----------------*/
@@ -264,42 +295,12 @@
 
 
 
-    /*-------------------
-        Category head
-    -------------------*/
-    .category_head .data
-    {
-        min-height: 206px;
-        padding: 24px 10px;
-    }
-
-
-    .category_head .icon
-    {
-        width: 24px;
-        height: 24px;
-        margin-bottom: 12px;
-    }
-
-
-    .category_head .name
-    {
-        font-size: var(--font_size_title);
-    }
-
-
-    .category_head .data .col + .col
-    {
-        padding-left: 13px;
-    }
-
-
-
     /*-----------
         Steps
     -----------*/
     .steps .row,
-    .steps .row.small
+    .steps .row.small,
+    .steps .row.big
     {
         flex-direction: column;
 
@@ -313,6 +314,19 @@
         width: 190px;
         max-width: 100%;
         margin-left: 0;
+    }
+
+
+    .steps .row.big > *
+    {
+        width: 100%;
+        margin-left: 0;
+    }
+
+
+    .steps .message
+    {
+        padding: 30px 10px;
     }
 
 
@@ -730,6 +744,352 @@
 
 
 
+    /*-----------------
+        Advantages2
+    -----------------*/
+    .advantages2 .item
+    {
+        margin-top: 23px;
+        padding: 35px 16px;
+    }
+
+
+    .advantages2 .item .number
+    {
+        top: -25px;
+
+        width: 46px;
+        height: 46px;
+    }
+
+
+
+    /*--------------------------
+        What is assembly jig
+    --------------------------*/
+    .what_is_assembly_jig .row
+    {
+        margin-left: 0;
+    }
+
+
+    .what_is_assembly_jig .row > *
+    {
+        width: 100%;
+        margin-left: 0;
+    }
+
+
+    .what_is_assembly_jig .item
+    {
+        margin-top: 23px;
+        padding: 35px 16px;
+    }
+
+
+    .what_is_assembly_jig .item .number
+    {
+        top: -25px;
+
+        width: 46px;
+        height: 46px;
+    }
+
+
+
+    /*-------------------------
+        Benefits of tilters
+    -------------------------*/
+    .benefits_tilters .row
+    {
+        margin-left: 0;
+    }
+
+
+    .benefits_tilters .row > *
+    {
+        width: 100%;
+        margin-left: 0;
+    }
+
+
+    .benefits_tilters .item
+    {
+        margin-top: 23px;
+        padding: 35px 16px;
+    }
+
+
+    .benefits_tilters .item .number
+    {
+        top: -25px;
+
+        width: 46px;
+        height: 46px;
+    }
+
+
+
+    /*--------------------------
+        Stages of tilter dev
+    --------------------------*/
+    .stages .row
+    {
+        margin-bottom: -20px;
+        margin-left: 0;
+    }
+
+
+    .stages .row > *
+    {
+        width: 100%;
+        margin-bottom: 20px;
+        margin-left: 0;
+    }
+
+
+    .stages .item
+    {
+        margin-top: 23px;
+        padding: 35px 16px;
+    }
+
+
+    .stages .item .icon
+    {
+        top: -25px;
+
+        width: 46px;
+        height: 46px;
+    }
+
+
+    .stages .item .icon img
+    {
+        width: 18px;
+        height: 18px;
+    }
+
+
+    .stages .item .number
+    {
+        top: -25px;
+
+        width: 46px;
+        height: 46px;
+    }
+
+
+
+    /*--------------------
+        Why choose us2
+    --------------------*/
+    .why_choose_us2 .row
+    {
+        margin-left: 0;
+    }
+
+
+    .why_choose_us2 .row > *
+    {
+        width: 100%;
+        margin-left: 0;
+    }
+
+
+    .why_choose_us2 .item .desc
+    {
+        margin-top: 16px;
+    }
+
+
+    .why_choose_us2 .message
+    {
+        padding: 30px 10px;
+    }
+
+
+
+    /*----------------
+        Error page
+    ----------------*/
+    .error_page .code
+    {
+        font-size: 100px;
+        line-height: 73px;
+    }
+
+
+    .error_page .you_can_try .label,
+    .error_page .you_can_try .name,
+    .error_page .you_can_try .desc
+    {
+        font-size: 14px;
+    }
+
+
+
+    /*--------------------------
+        Benefits welding jig
+    --------------------------*/
+    .benefits_welding_jig .row
+    {
+        margin-left: 0;
+    }
+
+
+    .benefits_welding_jig .row > *
+    {
+        width: 100%;
+        margin-left: 0;
+    }
+
+
+    .benefits_welding_jig .item
+    {
+        margin-top: 23px;
+        padding: 35px 16px;
+    }
+
+
+    .benefits_welding_jig .item .number
+    {
+        top: -25px;
+
+        width: 46px;
+        height: 46px;
+    }
+
+
+
+    /*--------------------------------------------
+        Choosing the right fixturing equipment
+    --------------------------------------------*/
+    .choosing_right_fixturing_equipment .cont > .title
+    {
+        font-size: 14px;
+    }
+
+
+    .choosing_right_fixturing_equipment .row
+    {
+        margin-left: 0;
+    }
+
+
+    .choosing_right_fixturing_equipment .row > *
+    {
+        width: 100%;
+        margin-left: 0;
+    }
+
+
+    .choosing_right_fixturing_equipment .item .desc
+    {
+        margin-top: 16px;
+    }
+
+
+    .choosing_right_fixturing_equipment .notice,
+    .choosing_right_fixturing_equipment .message
+    {
+        padding: 47px 10px;
+    }
+
+
+
+    /*-----------------------------------
+        Process of aggregate machines
+    -----------------------------------*/
+    .process_aggregate_machines .row
+    {
+        margin-left: 0;
+    }
+
+
+    .process_aggregate_machines .row > *
+    {
+        width: 100%;
+        margin-left: 0;
+    }
+
+
+    .process_aggregate_machines .item
+    {
+        margin-top: 23px;
+        padding: 35px 16px;
+    }
+
+
+    .process_aggregate_machines .item .icon
+    {
+        top: -25px;
+
+        width: 46px;
+        height: 46px;
+    }
+
+
+    .process_aggregate_machines .item .name
+    {
+        font-size: 14px;
+    }
+
+
+    .process_aggregate_machines .message
+    {
+        padding: 30px 10px;
+    }
+
+
+
+    /*--------------------------------
+        Technological capabilities
+    --------------------------------*/
+    .technological_capabilities .message
+    {
+        padding: 30px 10px;
+    }
+
+
+
+    /*--------------
+        Warranty
+    --------------*/
+    .warranty .row
+    {
+        margin-left: 0;
+    }
+
+
+    .warranty .row > *,
+    .warranty .row > *.big
+    {
+        width: 100%;
+        margin-left: 0;
+    }
+
+
+    .warranty .item,
+    .warranty .item.big
+    {
+        padding: 35px 16px;
+    }
+
+
+    .warranty .item .name
+    {
+        font-size: 14px;
+    }
+
+
+    .warranty .message
+    {
+        padding: 30px 10px;
+    }
+
+
+
     /*------------
         Footer
     ------------*/
@@ -793,5 +1153,15 @@
         width: 100%;
 
         text-align: center;
+    }
+
+
+
+    /*-----------
+        PopUp
+    -----------*/
+    .modal
+    {
+        padding: 40px 16px;
     }
 }

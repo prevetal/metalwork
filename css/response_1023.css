@@ -63,6 +63,57 @@
 
 
 
+    /*---------------
+        Page head
+    ---------------*/
+    .page_head .data
+    {
+        min-height: 260px;
+        padding: 28px;
+    }
+
+
+    .page_head .data .col + .col
+    {
+        padding-left: 20px;
+    }
+
+
+    .page_head .icon
+    {
+        width: 44px;
+        height: 44px;
+        margin-bottom: 16px;
+    }
+
+
+    .page_head .name
+    {
+        font-size: 26px;
+
+        width: 100%;
+    }
+
+
+    .page_head .link
+    {
+        margin-top: 24px;
+    }
+
+
+    .page_head .link a
+    {
+        font-size: var(--font_size);
+    }
+
+
+    .page_head .small_desc
+    {
+        font-size: var(--font_size);
+    }
+
+
+
     /*----------------
         Block head
     ----------------*/
@@ -75,6 +126,35 @@
     .block_head .title
     {
         line-height: 20px;
+    }
+
+
+    .block_head .title br
+    {
+        display: none;
+    }
+
+
+
+    /*----------------
+        Typography
+    ----------------*/
+    .text_block
+    {
+        font-size: var(--font_size);
+    }
+
+
+    .text_block > *
+    {
+        margin-bottom: 20px;
+    }
+
+
+    .text_block figure
+    {
+        margin-top: 30px;
+        margin-bottom: 30px;
     }
 
 
@@ -301,57 +381,6 @@
 
 
     /*-------------------
-        Category head
-    -------------------*/
-    .category_head .data
-    {
-        min-height: 260px;
-        padding: 28px;
-    }
-
-
-    .category_head .data .col + .col
-    {
-        padding-left: 20px;
-    }
-
-
-    .category_head .icon
-    {
-        width: 44px;
-        height: 44px;
-        margin-bottom: 16px;
-    }
-
-
-    .category_head .name
-    {
-        font-size: 26px;
-
-        width: 100%;
-    }
-
-
-    .category_head .link
-    {
-        margin-top: 24px;
-    }
-
-
-    .category_head .link a
-    {
-        font-size: var(--font_size);
-    }
-
-
-    .category_head .small_desc
-    {
-        font-size: var(--font_size);
-    }
-
-
-
-    /*-------------------
         Category desc
     -------------------*/
     .category_desc .text .big
@@ -364,14 +393,16 @@
     /*-----------
         Steps
     -----------*/
-    .steps .row
+    .steps .row,
+    .steps .row.big
     {
         margin-bottom: -30px;
         margin-left: -30px;
     }
 
 
-    .steps .row > *
+    .steps .row > *,
+    .steps .row.big > *
     {
         width: calc(33.333% - 30px);
         margin-bottom: 30px;
@@ -382,6 +413,25 @@
     .steps .step .desc
     {
         font-size: var(--font_size);
+    }
+
+
+    .steps .message
+    {
+        padding: 24px;
+    }
+
+
+    .steps .message .icon
+    {
+        width: 80px;
+        height: 80px;
+    }
+
+
+    .steps .message .icon + *
+    {
+        width: calc(100% - 120px);
     }
 
 
@@ -840,11 +890,454 @@
 
 
 
+    /*---------------------------------
+        What is an assembly fixture
+    ---------------------------------*/
+    .what_is_assembly_fixture .title
+    {
+        width: 324px;
+    }
+
+
+    .what_is_assembly_fixture .desc
+    {
+        width: calc(100% - 344px);
+        padding: 12px 0 12px 20px;
+    }
+
+
+
+    /*-----------------
+        Advantages2
+    -----------------*/
+    .advantages2 .item .desc
+    {
+        font-size: var(--font_size);
+    }
+
+
+
+    /*-------------------------------
+        Flexibility in production
+    -------------------------------*/
+    .flexibility_in_production .title
+    {
+        width: 324px;
+    }
+
+
+    .flexibility_in_production .desc
+    {
+        width: calc(100% - 344px);
+        padding: 0 0 0 20px;
+    }
+
+
+
+    /*-------------------------
+        Benefits of tilters
+    -------------------------*/
+    .benefits_tilters .item .desc
+    {
+        font-size: var(--font_size);
+    }
+
+
+
+    /*--------------------------
+        Stages of tilter dev
+    --------------------------*/
+    .stages .item .desc
+    {
+        font-size: var(--font_size);
+    }
+
+
+
+    /*--------------------------
+        What is assembly jig
+    --------------------------*/
+    .what_is_assembly_jig .row > *
+    {
+        width: calc(50% - 20px);
+    }
+
+
+    .what_is_assembly_jig .item .desc
+    {
+        font-size: var(--font_size);
+    }
+
+
+
+    /*--------------------
+        What is tilter
+    --------------------*/
+    .what_is_tilter .title
+    {
+        width: 324px;
+    }
+
+
+    .what_is_tilter .desc
+    {
+        width: calc(100% - 344px);
+        padding: 12px 0 12px 20px;
+    }
+
+
+
+    /*--------------------
+        Why choose us2
+    --------------------*/
+    .why_choose_us2 .item .desc
+    {
+        font-size: var(--font_size);
+    }
+
+
+    .why_choose_us2 .message
+    {
+        padding: 24px;
+    }
+
+
+    .why_choose_us2 .message .icon
+    {
+        width: 80px;
+        height: 80px;
+    }
+
+
+    .why_choose_us2 .message .icon + *
+    {
+        width: calc(100% - 120px);
+    }
+
+
+
+    /*----------------
+        Error page
+    ----------------*/
+    .error_page .code
+    {
+        font-size: 128px;
+        line-height: 93px;
+
+        margin-bottom: 50px;
+    }
+
+
+    .error_page .you_can_try > * + *
+    {
+        margin-top: 24px;
+    }
+
+
+    .error_page .you_can_try .label,
+    .error_page .you_can_try .name,
+    .error_page .you_can_try .desc
+    {
+        font-size: var(--font_size);
+    }
+
+
+
+    /*------------------
+        Article info
+    ------------------*/
+    .article_info .text_block
+    {
+        width: 100%;
+    }
+
+
+    .article_info .other_articles
+    {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+
+    .article_info .other_articles .article .name,
+    .article_info .other_articles .article .desc
+    {
+        font-size: var(--font_size);
+    }
+
+
+    .article_info .other_articles .article .link
+    {
+        margin-top: 30px;
+    }
+
+
+
+    /*-------------------
+        Main services
+    -------------------*/
+    .main_services .service .name,
+    .main_services .service .desc
+    {
+        font-size: var(--font_size);
+    }
+
+
+    .main_services .service .link
+    {
+        padding-top: 30px;
+    }
+
+
+
+    /*-------------------------
+        What is welding jig
+    -------------------------*/
+    .what_is_welding_jig .title
+    {
+        width: 324px;
+    }
+
+
+    .what_is_welding_jig .desc
+    {
+        width: calc(100% - 344px);
+        padding: 12px 0 12px 20px;
+    }
+
+
+
+    /*--------------------------
+        Types of welding jig
+    --------------------------*/
+    .types_welding_jig .desc
+    {
+        font-size: var(--font_size);
+    }
+
+
+
+    /*-----------------------------
+        What is welding fixture
+    -----------------------------*/
+    .what_is_welding_fixture .title
+    {
+        width: 324px;
+    }
+
+
+    .what_is_welding_fixture .desc
+    {
+        width: calc(100% - 344px);
+        padding: 12px 0 12px 20px;
+    }
+
+
+
+    /*--------------------------------
+        Advantages welding fixture
+    --------------------------------*/
+    .advantages_welding_fixture .data > * + *
+    {
+        margin-top: 30px;
+    }
+
+
+    .advantages_welding_fixture .desc
+    {
+        font-size: var(--font_size);
+    }
+
+
+
+    /*--------------------------------------------
+        Choosing the right fixturing equipment
+    --------------------------------------------*/
+    .choosing_right_fixturing_equipment .row
+    {
+        margin-top: 30px;
+    }
+
+
+    .choosing_right_fixturing_equipment .item .desc
+    {
+        font-size: var(--font_size);
+    }
+
+
+    .choosing_right_fixturing_equipment .notice
+    {
+        font-size: var(--font_size);
+
+        margin-top: 30px;
+        padding: 24px;
+    }
+
+
+    .choosing_right_fixturing_equipment .message
+    {
+        padding: 24px;
+    }
+
+
+    .choosing_right_fixturing_equipment .message .icon
+    {
+        width: 80px;
+        height: 80px;
+    }
+
+
+    .choosing_right_fixturing_equipment .message .icon + *
+    {
+        width: calc(100% - 120px);
+    }
+
+
+
+    /*---------------------------------
+        What is reverse engineering
+    ---------------------------------*/
+    .what_is_reverse_engineering .title
+    {
+        width: 324px;
+    }
+
+
+    .what_is_reverse_engineering .desc
+    {
+        width: calc(100% - 344px);
+        padding: 12px 0 12px 20px;
+    }
+
+
+
+    /*----------------------------------
+        What is an aggregate_machine
+    ----------------------------------*/
+    .what_is_aggregate_machine .title
+    {
+        width: 324px;
+    }
+
+
+    .what_is_aggregate_machine .desc
+    {
+        width: calc(100% - 344px);
+        padding: 12px 0 12px 20px;
+    }
+
+
+
+    /*-----------------------------------
+        Process of aggregate machines
+    -----------------------------------*/
+    .process_aggregate_machines .cont > .title
+    {
+        margin-bottom: 30px;
+    }
+
+
+    .process_aggregate_machines .item .desc
+    {
+        font-size: var(--font_size);
+    }
+
+
+    .process_aggregate_machines .message
+    {
+        padding: 24px;
+    }
+
+
+    .process_aggregate_machines .message .icon
+    {
+        width: 80px;
+        height: 80px;
+    }
+
+
+    .process_aggregate_machines .message .icon + *
+    {
+        width: calc(100% - 120px);
+    }
+
+
+
+    /*--------------------------------
+        Technological capabilities
+    --------------------------------*/
+    .technological_capabilities .message
+    {
+        padding: 24px;
+    }
+
+
+    .technological_capabilities .message .icon
+    {
+        width: 80px;
+        height: 80px;
+    }
+
+
+    .technological_capabilities .message .icon + *
+    {
+        width: calc(100% - 120px);
+    }
+
+
+
+    /*--------------
+        Warranty
+    --------------*/
+    .warranty .row > *
+    {
+        width: calc(50% - 20px);
+    }
+
+
+    .warranty .item .desc
+    {
+        font-size: var(--font_size);
+    }
+
+
+    .warranty .message
+    {
+        padding: 24px;
+    }
+
+
+    .warranty .message .icon
+    {
+        width: 80px;
+        height: 80px;
+    }
+
+
+    .warranty .message .icon + *
+    {
+        width: calc(100% - 120px);
+    }
+
+
+
     /*------------
         Footer
     ------------*/
     footer .row > *
     {
         width: calc(50% - 20px);
+    }
+
+
+
+    /*-----------
+        PopUp
+    -----------*/
+    .modal .close_btn
+    {
+        font-size: var(--font_size);
+
+        margin-top: 60px;
     }
 }

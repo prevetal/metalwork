@@ -249,6 +249,35 @@ button
 
 
 
+/*--------------
+    Fancybox
+--------------*/
+.fancybox__backdrop
+{
+    background: rgba(30, 30, 30, .90);
+}
+
+
+.fancybox__slide
+{
+    padding: 40px;
+}
+
+
+.fancybox__content > .f-button.is-close-btn,
+.is-compact .fancybox__content > .f-button.is-close-btn
+{
+    display: none;
+}
+
+
+.fancybox__content > .f-button.is-close-btn svg
+{
+    stroke: none;
+}
+
+
+
 /*---------------
     Accordion
 ---------------*/
@@ -788,6 +817,211 @@ header .phone .icon
 
 
 
+/*---------------
+    Page head
+---------------*/
+.page_head
+{
+    padding-top: 11px;
+}
+
+
+.page_head .data
+{
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    min-height: 378px;
+    padding: 20px 59px;
+
+    color: #fff;
+    background: #ddd;
+}
+
+
+.page_head .data:after
+{
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    content: '';
+
+    background: rgba(0, 0, 0, .54);
+}
+
+
+.page_head .data > *
+{
+    position: relative;
+    z-index: 3;
+}
+
+
+.page_head .data > *:first-child
+{
+    margin-top: auto !important;
+}
+
+.page_head .data > *:nth-last-child(2)
+{
+    margin-bottom: auto !important;
+}
+
+
+.page_head .data .row
+{
+    display: flex;
+    align-content: stretch;
+    align-items: stretch;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.page_head .data .col
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    width: calc(50% - 10px);
+}
+
+
+.page_head .data .col + .col
+{
+    padding-left: 24px;
+
+    border-left: 3px solid #00a0e4;
+}
+
+
+.page_head .icon
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+
+.page_head .icon img
+{
+    display: block;
+
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+.page_head .name
+{
+    font-size: 38px;
+    font-weight: 600;
+
+    display: block;
+
+    width: 610px;
+    max-width: 100%;
+}
+
+.page_head .name.middle
+{
+    width: 800px;
+}
+
+.page_head .name.big
+{
+    width: 840px;
+}
+
+
+.page_head .desc
+{
+    font-size: var(--font_size_title);
+
+    width: 100%;
+    margin-top: 20px;
+}
+
+.page_head .desc.small
+{
+    width: 840px;
+    max-width: 100%;
+}
+
+
+.page_head .link
+{
+    width: 100%;
+    margin-top: 55px;
+}
+
+
+.page_head .link a
+{
+    font-size: 14px;
+
+    display: inline-block;
+
+    padding: 10px 14px;
+
+    transition: background .2s linear;
+    vertical-align: top;
+    text-decoration: none;
+
+    color: currentColor;
+    background: #00a0e4;
+}
+
+.page_head .link a:hover
+{
+    background: #580be4;
+}
+
+
+.page_head .small_desc
+{
+    font-size: 14px;
+    font-weight: 300;
+}
+
+
+.page_head .bg
+{
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    object-fit: cover;
+}
+
+
+
 /*----------------
     Block head
 ----------------*/
@@ -823,6 +1057,18 @@ header .phone .icon
     width: 610px;
     max-width: 100%;
     margin-top: 30px;
+}
+
+
+.block_head .desc.full_w
+{
+    width: 100%;
+}
+
+
+.block_head .desc > * + *
+{
+    margin-top: 20px;
 }
 
 
@@ -980,6 +1226,61 @@ header .phone .icon
 .form .submit_btn:hover
 {
     background: #580be4;
+}
+
+
+
+/*----------------
+    Typography
+----------------*/
+.text_block
+{
+    font-size: 18px;
+    font-weight: 300;
+}
+
+
+.text_block > *
+{
+    margin-bottom: 29px;
+}
+
+
+.text_block > :last-child
+{
+    margin-bottom: 0 !important;
+}
+
+.text_block > :first-child
+{
+    margin-top: 0 !important;
+}
+
+
+.text_block img
+{
+    display: block;
+
+    max-width: 100%;
+}
+
+
+.text_block figure
+{
+    display: block;
+
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+
+.text_block figcaption
+{
+    font-size: 14px;
+
+    margin-top: 10px;
+
+    color: #7b7b7b;
 }
 
 
@@ -1520,7 +1821,6 @@ header .phone .icon
 {
     font-size: 14px;
     font-weight: 300;
-    font-style: normal;
 
     width: 100%;
     margin-top: 17px;
@@ -1566,6 +1866,12 @@ header .phone .icon
 }
 
 
+.services .service .data.aligncenter
+{
+    justify-content: center;
+}
+
+
 .services .service .name
 {
     font-size: var(--font_size_title);
@@ -1592,12 +1898,20 @@ header .phone .icon
     font-size: 14px;
     font-weight: 300;
 
+    width: 100%;
     margin-top: 16px;
+}
+
+
+.services .service .desc > * + *
+{
+    margin-top: 18px;
 }
 
 
 .services .service .link
 {
+    width: 100%;
     margin-top: auto;
     padding-top: 40px;
 }
@@ -2220,6 +2534,12 @@ header .phone .icon
 }
 
 
+.contacts_info .data > .desc b
+{
+    font-weight: 500;
+}
+
+
 .contacts_info .data .text
 {
     font-size: 18px;
@@ -2271,7 +2591,7 @@ header .phone .icon
 }
 
 
-.contacts_info .data ul
+.contacts_info .data * + ul
 {
     margin-top: 32px;
 }
@@ -2345,200 +2665,6 @@ header .phone .icon
 
 
 /*-------------------
-    Category head
--------------------*/
-.category_head
-{
-    padding-top: 11px;
-}
-
-
-.category_head .data
-{
-    position: relative;
-
-    display: flex;
-    flex-direction: column;
-
-    min-height: 378px;
-    padding: 32px 59px;
-
-    color: #fff;
-    background: #ddd;
-}
-
-
-.category_head .data:after
-{
-    position: absolute;
-    z-index: 2;
-    bottom: 0;
-    left: 0;
-
-    display: block;
-
-    width: 100%;
-    height: 100%;
-
-    content: '';
-
-    background: rgba(0, 0, 0, .54);
-}
-
-
-.category_head .data > *
-{
-    position: relative;
-    z-index: 3;
-}
-
-
-.category_head .data > *:first-child
-{
-    margin-top: auto !important;
-}
-
-.category_head .data > *:nth-last-child(2)
-{
-    margin-bottom: auto !important;
-}
-
-
-.category_head .data .row
-{
-    display: flex;
-    align-content: stretch;
-    align-items: stretch;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-
-.category_head .data .col
-{
-    display: flex;
-    align-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-
-    width: calc(50% - 10px);
-}
-
-
-.category_head .data .col + .col
-{
-    padding-left: 24px;
-
-    border-left: 3px solid #00a0e4;
-}
-
-
-.category_head .icon
-{
-    display: flex;
-    align-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    width: 50px;
-    height: 50px;
-    margin-bottom: 20px;
-}
-
-
-.category_head .icon img
-{
-    display: block;
-
-    max-width: 100%;
-    max-height: 100%;
-}
-
-
-.category_head .name
-{
-    font-size: 38px;
-    font-weight: 600;
-
-    display: block;
-
-    width: 610px;
-    max-width: 100%;
-}
-
-.category_head .name.big
-{
-    width: 800px;
-}
-
-
-.category_head .desc
-{
-    font-size: var(--font_size_title);
-
-    width: 100%;
-    margin-top: 20px;
-}
-
-
-.category_head .link
-{
-    width: 100%;
-    margin-top: 55px;
-}
-
-
-.category_head .link a
-{
-    font-size: 14px;
-
-    display: inline-block;
-
-    padding: 10px 14px;
-
-    transition: background .2s linear;
-    vertical-align: top;
-    text-decoration: none;
-
-    color: currentColor;
-    background: #00a0e4;
-}
-
-.category_head .link a:hover
-{
-    background: #580be4;
-}
-
-
-.category_head .small_desc
-{
-    font-size: 14px;
-    font-weight: 300;
-}
-
-
-.category_head .bg
-{
-    position: absolute;
-    z-index: 1;
-    bottom: 0;
-    left: 0;
-
-    display: block;
-
-    width: 100%;
-    height: 100%;
-
-    pointer-events: none;
-
-    object-fit: cover;
-}
-
-
-
-/*-------------------
     Category desc
 -------------------*/
 .category_desc
@@ -2570,6 +2696,12 @@ header .phone .icon
 }
 
 
+.category_desc .text.full_w
+{
+    width: 100%;
+}
+
+
 .category_desc .text > * + *
 {
     margin-top: 32px;
@@ -2587,6 +2719,17 @@ header .phone .icon
 /*-----------
     Steps
 -----------*/
+.steps .cont > .title
+{
+    font-size: var(--font_size_title);
+    font-weight: 400;
+
+    width: 602px;
+    max-width: 100%;
+    margin-bottom: 32px;
+}
+
+
 .steps .row
 {
     align-content: stretch;
@@ -2607,7 +2750,6 @@ header .phone .icon
 }
 
 
-
 .steps .row.small
 {
     margin-left: -20px;
@@ -2619,6 +2761,22 @@ header .phone .icon
     width: calc(20% - 20px);
     margin-left: 20px;
 }
+
+
+.steps .row.big
+{
+    margin-bottom: -32px;
+    margin-left: -20px;
+}
+
+
+.steps .row.big > *
+{
+    width: calc(33.333% - 20px);
+    margin-bottom: 32px;
+    margin-left: 20px;
+}
+
 
 
 .steps .step .number
@@ -2681,6 +2839,11 @@ header .phone .icon
     font-weight: 600;
 }
 
+.steps .big .step .name
+{
+    font-size: 18px;
+}
+
 
 .steps .step .desc
 {
@@ -2693,6 +2856,12 @@ header .phone .icon
     font-weight: 300;
 
     margin-top: 10px;
+}
+
+
+.steps .big .step .name + .desc
+{
+    margin-top: 16px;
 }
 
 
@@ -2711,7 +2880,6 @@ header .phone .icon
 {
     font-size: 18px;
     font-weight: 300;
-    font-style: normal;
 
     padding-top: 2px;
     padding-left: 20px;
@@ -2741,6 +2909,42 @@ header .phone .icon
 
     max-width: 100%;
     max-height: 100%;
+}
+
+
+
+.steps .message
+{
+    font-size: var(--font_size_title);
+
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin-top: 32px;
+    padding: 28px 31px 27px 40px;
+
+    color: #fff;
+    background: #00a0e4;
+}
+
+
+.steps .message .icon
+{
+    display: block;
+
+    width: 104px;
+    height: 104px;
+}
+
+
+.steps .message .icon + *
+{
+    align-self: center;
+
+    width: calc(100% - 153px);
 }
 
 
@@ -3172,7 +3376,6 @@ header .phone .icon
 {
     font-size: 14px;
     font-weight: 300;
-    font-style: normal;
 
     width: 100%;
     margin-top: 17px;
@@ -3743,7 +3946,6 @@ header .phone .icon
 {
     font-size: 14px;
     font-weight: 300;
-    font-style: normal;
 
     width: 100%;
     margin-top: 17px;
@@ -3903,7 +4105,6 @@ header .phone .icon
 {
     font-size: 14px;
     font-weight: 300;
-    font-style: normal;
 
     width: 100%;
 }
@@ -4254,7 +4455,6 @@ header .phone .icon
 {
     font-size: 14px;
     font-weight: 300;
-    font-style: normal;
 
     width: 100%;
 }
@@ -4607,6 +4807,2905 @@ header .phone .icon
 
 
 
+/*---------------------------------
+    What is an assembly fixture
+---------------------------------*/
+.what_is_assembly_fixture .row
+{
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.what_is_assembly_fixture .title
+{
+    font-size: var(--font_size_title);
+    font-weight: 600;
+
+    width: 452px;
+    max-width: 100%;
+}
+
+
+.what_is_assembly_fixture .desc
+{
+    font-weight: 300;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    width: calc(100% - 472px);
+    padding: 17px 0 17px 28px;
+
+    border-left: 3px solid #00a0e4;
+}
+
+
+
+/*-----------------
+    Advantages2
+-----------------*/
+.advantages2 .row
+{
+    align-content: stretch;
+    align-items: stretch;
+
+    margin-bottom: -20px;
+    margin-left: -20px;
+
+    counter-reset: number;
+}
+
+
+.advantages2 .row > *
+{
+    width: calc(33.333% - 20px);
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+
+.advantages2 .item
+{
+    position: relative;
+
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    margin-top: 30px;
+    padding: 51px 28px;
+
+    text-align: center;
+
+    border: 2px solid #cecece;
+}
+
+
+.advantages2 .item .number
+{
+    font-size: 18px;
+    font-weight: 500;
+
+    position: absolute;
+    top: -32px;
+    right: 0;
+    left: 0;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+
+    color: #fff;
+    background: #00a0e4;
+}
+
+
+.advantages2 .item .number:before
+{
+    content: counter(number, decimal-leading-zero);
+    counter-increment: number;
+}
+
+
+.advantages2 .item .name
+{
+    font-size: 18px;
+    font-weight: 600;
+
+    width: 100%;
+}
+
+
+.advantages2 .item .desc
+{
+    font-size: 14px;
+    font-weight: 300;
+
+    width: 100%;
+    margin-top: 18px;
+}
+
+
+
+/*-------------------------------
+    Flexibility in production
+-------------------------------*/
+.flexibility_in_production
+{
+    color: #fff;
+    background: #1b2430;
+}
+
+
+.flexibility_in_production .row
+{
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.flexibility_in_production .title
+{
+    font-size: var(--font_size_title);
+    font-weight: 600;
+
+    width: 452px;
+    max-width: 100%;
+}
+
+
+.flexibility_in_production .desc
+{
+    font-weight: 300;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    width: calc(100% - 472px);
+    padding: 0 0 0 28px;
+
+    border-left: 3px solid #00a0e4;
+}
+
+
+.flexibility_in_production .desc > * + *
+{
+    margin-top: 20px;
+}
+
+
+
+/*-----------------------
+    Purpose and types
+-----------------------*/
+.purpose_and_types
+{
+    position: relative;
+
+    color: #fff;
+}
+
+
+.purpose_and_types:before
+{
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    content: '';
+
+    background: rgba(0,0,0,.54);
+}
+
+
+.purpose_and_types .cont
+{
+    position: relative;
+    z-index: 3;
+}
+
+
+.purpose_and_types .bg
+{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    object-fit: cover;
+}
+
+
+.purpose_and_types .title
+{
+    font-size: var(--font_size_title);
+    font-weight: 600;
+
+    text-align: center;
+}
+
+
+.purpose_and_types .desc
+{
+    font-size: 18px;
+    font-weight: 300;
+
+    margin-top: 24px;
+
+    text-align: center;
+}
+
+
+
+/*-----------------------------------------
+    Classification of assembly fixtures
+-----------------------------------------*/
+.classification_assembly_fixtures
+{
+    position: relative;
+}
+
+
+.classification_assembly_fixtures .block_head
+{
+    width: calc(50% - 56px);
+    margin-bottom: 0;
+}
+
+
+.classification_assembly_fixtures .bg
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: block;
+
+    width: calc(50% - 10px);
+    height: 100%;
+
+    pointer-events: none;
+
+    object-fit: cover;
+}
+
+
+
+/*--------------------------
+    What is assembly jig
+--------------------------*/
+.what_is_assembly_jig .row
+{
+    align-content: stretch;
+    align-items: stretch;
+
+    margin-bottom: -20px;
+    margin-left: -20px;
+
+    counter-reset: number;
+}
+
+
+.what_is_assembly_jig .row > *
+{
+    width: calc(25% - 20px);
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+
+.what_is_assembly_jig .cont > .title
+{
+    font-size: var(--font_size_title);
+    font-weight: 400;
+
+    margin-bottom: 32px;
+}
+
+
+.what_is_assembly_jig .item
+{
+    position: relative;
+
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    margin-top: 30px;
+    padding: 51px 28px;
+
+    text-align: center;
+
+    border: 2px solid #cecece;
+}
+
+
+.what_is_assembly_jig .item .number
+{
+    font-size: 18px;
+    font-weight: 500;
+
+    position: absolute;
+    top: -32px;
+    right: 0;
+    left: 0;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+
+    color: #fff;
+    background: #00a0e4;
+}
+
+
+.what_is_assembly_jig .item .number:before
+{
+    content: counter(number, decimal-leading-zero);
+    counter-increment: number;
+}
+
+
+.what_is_assembly_jig .item .name
+{
+    font-size: 18px;
+    font-weight: 600;
+
+    width: 100%;
+}
+
+
+.what_is_assembly_jig .item .desc
+{
+    font-size: 14px;
+    font-weight: 300;
+
+    width: 100%;
+    margin-top: 18px;
+}
+
+
+
+/*----------------------------
+    Benefits assembly jigs
+----------------------------*/
+.benefits_assembly_jigs
+{
+    position: relative;
+}
+
+
+.benefits_assembly_jigs .cont
+{
+    position: relative;
+    z-index: 3;
+}
+
+
+.benefits_assembly_jigs .bg
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: block;
+
+    width: calc(50% - 10px);
+    height: 100%;
+
+    pointer-events: none;
+
+    object-fit: cover;
+}
+
+
+.benefits_assembly_jigs .data
+{
+    width: calc(50% - 18px);
+}
+
+
+.benefits_assembly_jigs ul li
+{
+    font-size: 18px;
+    font-weight: 300;
+
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    padding-left: 38px;
+
+    list-style-type: none;
+}
+
+
+.benefits_assembly_jigs ul li + li
+{
+    margin-top: 18px;
+}
+
+
+.benefits_assembly_jigs ul li:before
+{
+    position: absolute;
+    top: 4px;
+    left: 0;
+
+    display: block;
+
+    width: 14px;
+    height: 14px;
+
+    content: '';
+
+    background: #00a0e4;
+}
+
+
+.benefits_assembly_jigs ul .name
+{
+    font-weight: 500;
+}
+
+
+.benefits_assembly_jigs ul .desc
+{
+    margin-top: 20px;
+}
+
+
+
+/*----------------------
+    These advantages
+----------------------*/
+.these_advantages
+{
+    position: relative;
+
+    color: #fff;
+}
+
+
+.these_advantages:before
+{
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    content: '';
+
+    background: rgba(0,0,0,.54);
+}
+
+
+.these_advantages .cont
+{
+    position: relative;
+    z-index: 3;
+}
+
+
+.these_advantages .bg
+{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    object-fit: cover;
+}
+
+
+.these_advantages .title
+{
+    font-size: var(--font_size_title);
+    font-weight: 600;
+
+    width: 610px;
+    max-width: 100%;
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+
+/*--------------------
+    What is tilter
+--------------------*/
+.what_is_tilter
+{
+    color: #fff;
+    background: #1b2430;
+}
+
+
+.what_is_tilter .row
+{
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.what_is_tilter .title
+{
+    font-size: var(--font_size_title);
+    font-weight: 600;
+
+    width: 452px;
+    max-width: 100%;
+}
+
+
+.what_is_tilter .desc
+{
+    font-weight: 300;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    width: calc(100% - 472px);
+    padding: 17px 0 17px 28px;
+
+    border-left: 3px solid #00a0e4;
+}
+
+
+
+/*----------------------
+    Types of tilters
+----------------------*/
+.types_tilters
+{
+    position: relative;
+}
+
+
+.types_tilters .cont
+{
+    position: relative;
+    z-index: 3;
+}
+
+
+.types_tilters .bg
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: block;
+
+    width: calc(50% - 10px);
+    height: 100%;
+
+    pointer-events: none;
+
+    object-fit: cover;
+}
+
+
+.types_tilters .data
+{
+    width: calc(50% - 18px);
+}
+
+
+.types_tilters .data > .title
+{
+    font-size: var(--font_size_title);
+    font-weight: 400;
+
+    margin-bottom: 30px;
+}
+
+
+.types_tilters ul li
+{
+    font-size: 18px;
+    font-weight: 300;
+
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    padding-left: 38px;
+
+    list-style-type: none;
+}
+
+
+.types_tilters ul li + li
+{
+    margin-top: 18px;
+}
+
+
+.types_tilters ul li:before
+{
+    position: absolute;
+    top: 4px;
+    left: 0;
+
+    display: block;
+
+    width: 14px;
+    height: 14px;
+
+    content: '';
+
+    background: #00a0e4;
+}
+
+
+
+/*-------------------------
+    Benefits of tilters
+-------------------------*/
+.benefits_tilters
+{
+    color: #fff;
+    background: #00a0e4;
+}
+
+
+.benefits_tilters .block_head .title
+{
+    border-color: #66cdf8;
+}
+
+
+.benefits_tilters .row
+{
+    align-content: stretch;
+    align-items: stretch;
+
+    margin-bottom: -20px;
+    margin-left: -20px;
+
+    counter-reset: number;
+}
+
+
+.benefits_tilters .row > *
+{
+    width: calc(33.333% - 20px);
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+
+.benefits_tilters .item
+{
+    position: relative;
+
+    margin-top: 30px;
+    padding: 50px 28px;
+
+    text-align: center;
+
+    border: 2px solid rgba(102, 205, 248, .92);
+}
+
+
+.benefits_tilters .item .number
+{
+    font-size: 18px;
+    font-weight: 500;
+
+    position: absolute;
+    top: -32px;
+    right: 0;
+    left: 0;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+
+    color: #fff;
+    background: #00a0e4;
+}
+
+
+.benefits_tilters .item .number:before
+{
+    content: counter(number, decimal-leading-zero);
+    counter-increment: number;
+}
+
+
+.benefits_tilters .item .name
+{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+.benefits_tilters .item .desc
+{
+    font-size: 14px;
+    font-weight: 300;
+
+    width: 100%;
+    margin-top: 18px;
+}
+
+
+
+/*------------
+    Stages
+------------*/
+.stages .cont > .title
+{
+    font-size: var(--font_size_title);
+    font-weight: 400;
+
+    margin-bottom: 32px;
+}
+
+
+.stages .row
+{
+    align-content: stretch;
+    align-items: stretch;
+
+    margin-bottom: -32px;
+    margin-left: -20px;
+
+    counter-reset: number;
+}
+
+
+.stages .row > *
+{
+    width: calc(33.333% - 20px);
+    margin-bottom: 32px;
+    margin-left: 20px;
+}
+
+
+.stages .item
+{
+    position: relative;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    min-height: 247px;
+    margin-top: 30px;
+    padding: 50px 28px;
+
+    text-align: center;
+
+    border: 2px solid #cecece;
+}
+
+
+.stages .item .number
+{
+    font-size: 18px;
+    font-weight: 500;
+
+    position: absolute;
+    top: -32px;
+    right: 0;
+    left: 0;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+
+    color: #fff;
+    background: #00a0e4;
+}
+
+
+.stages .item .number:before
+{
+    content: counter(number, decimal-leading-zero);
+    counter-increment: number;
+}
+
+
+.stages .item .icon
+{
+    position: absolute;
+    top: -32px;
+    right: 0;
+    left: 0;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+
+    background: #00a0e4;
+}
+
+
+.stages .item .icon img
+{
+    display: block;
+
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+.stages .item .name
+{
+    font-size: 18px;
+    font-weight: 600;
+
+    width: 100%;
+}
+
+
+.stages .item .desc
+{
+    font-size: 14px;
+    font-weight: 300;
+
+    width: 100%;
+    margin-top: 18px;
+}
+
+
+
+/*--------------------
+    Why choose us2
+--------------------*/
+.why_choose_us2 .row
+{
+    margin-bottom: -30px;
+    margin-left: -30px;
+}
+
+
+.why_choose_us2 .row > *
+{
+    width: calc(50% - 30px);
+    margin-bottom: 30px;
+    margin-left: 30px;
+}
+
+
+.why_choose_us2 .item .name
+{
+    font-size: var(--font_size_title);
+    font-weight: 600;
+
+    color: #00a0e4;
+}
+
+
+.why_choose_us2 .item .desc
+{
+    font-size: 18px;
+    font-weight: 300;
+
+    margin-top: 18px;
+}
+
+
+.why_choose_us2 .message
+{
+    font-size: var(--font_size_title);
+
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin-top: 32px;
+    padding: 28px 31px 27px 40px;
+
+    color: #fff;
+    background: #00a0e4;
+}
+
+
+.why_choose_us2 .message .icon
+{
+    display: block;
+
+    width: 104px;
+    height: 104px;
+}
+
+
+.why_choose_us2 .message .icon + *
+{
+    align-self: center;
+
+    width: calc(100% - 153px);
+}
+
+
+
+/*-----------------------------
+    Applications of tilters
+-----------------------------*/
+.applications_tilters
+{
+    position: relative;
+}
+
+
+.applications_tilters .cont
+{
+    position: relative;
+    z-index: 3;
+}
+
+
+.applications_tilters .bg
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: block;
+
+    width: calc(50% - 10px);
+    height: 100%;
+
+    pointer-events: none;
+
+    object-fit: cover;
+}
+
+
+.applications_tilters .data
+{
+    width: calc(50% - 18px);
+}
+
+
+.applications_tilters ul li
+{
+    font-size: 18px;
+    font-weight: 300;
+
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    padding-left: 38px;
+
+    list-style-type: none;
+}
+
+
+.applications_tilters ul li + li
+{
+    margin-top: 18px;
+}
+
+
+.applications_tilters ul li:before
+{
+    position: absolute;
+    top: 4px;
+    left: 0;
+
+    display: block;
+
+    width: 14px;
+    height: 14px;
+
+    content: '';
+
+    background: #00a0e4;
+}
+
+
+
+/*----------------
+    Error page
+----------------*/
+.error_page
+{
+    padding-top: 40px;
+
+    text-align: center;
+}
+
+
+.error_page .code
+{
+    font-size: 156px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 113px;
+
+    margin-bottom: 70px;
+
+    color: #00a0e4;
+}
+
+
+.error_page .title
+{
+    font-size: var(--font_size_title);
+    font-weight: 600;
+
+    display: block;
+}
+
+
+.error_page .sub_title
+{
+    font-size: var(--font_size_title);
+    font-weight: 400;
+
+    display: block;
+
+    margin-top: 10px;
+}
+
+
+.error_page .you_can_try
+{
+    margin-top: 32px;
+}
+
+
+.error_page .you_can_try > * + *
+{
+    margin-top: 29px;
+}
+
+
+.error_page .you_can_try .label
+{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+.error_page .you_can_try .name
+{
+    font-size: 18px;
+    font-weight: 500;
+
+    color: #00a0e4;
+}
+
+
+.error_page .you_can_try .desc
+{
+    font-size: 18px;
+    font-weight: 300;
+}
+
+
+.error_page .you_can_try .link a
+{
+    font-size: 14px;
+
+    display: inline-block;
+
+    padding: 10px 14px;
+
+    vertical-align: top;
+    text-decoration: none;
+
+    color: #fff;
+    background: #00a0e4;
+}
+
+
+
+/*------------------
+    Article info
+------------------*/
+.article_info .cont
+{
+    justify-content: space-between;
+}
+
+
+.article_info .text_block
+{
+    width: calc(50% - 10px);
+}
+
+
+.article_info .other_articles
+{
+    width: calc(50% - 10px);
+}
+
+
+.article_info .other_articles > * + *
+{
+    margin-top: 20px;
+}
+
+
+.article_info .other_articles .article
+{
+    padding: 18px 28px;
+
+    border: 2px solid #cecece;
+}
+
+
+.article_info .other_articles .article .name
+{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+.article_info .other_articles .article .name a
+{
+    display: inline-block;
+
+    vertical-align: top;
+    text-decoration: none;
+
+    color: currentColor;
+}
+
+
+.article_info .other_articles .article .desc
+{
+    font-size: 18px;
+    font-weight: 300;
+
+    margin-top: 20px;
+}
+
+
+.article_info .other_articles .article .link
+{
+    margin-top: 44px;
+}
+
+
+.article_info .other_articles .article .link a
+{
+    font-size: 14px;
+
+    display: inline-block;
+
+    padding-bottom: 7px;
+
+    transition: color .2s linear;
+    vertical-align: top;
+    text-decoration: none;
+
+    color: currentColor;
+    border-bottom: 3px solid #00a0e4;
+}
+
+.article_info .other_articles .article .link a:hover
+{
+    color: #580be4;
+}
+
+
+
+/*----------------
+    About info
+----------------*/
+.about_why_choose_us
+{
+    position: relative;
+}
+
+
+.about_why_choose_us .cont
+{
+    position: relative;
+    z-index: 3;
+}
+
+
+.about_why_choose_us .bg
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: block;
+
+    width: calc(50% - 10px);
+    height: 100%;
+
+    pointer-events: none;
+
+    object-fit: cover;
+}
+
+
+.about_why_choose_us .data
+{
+    width: calc(50% - 18px);
+}
+
+
+.about_why_choose_us ul li
+{
+    font-size: 18px;
+    font-weight: 300;
+
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    padding-left: 38px;
+
+    list-style-type: none;
+}
+
+
+.about_why_choose_us ul li + li
+{
+    margin-top: 18px;
+}
+
+
+.about_why_choose_us ul li:before
+{
+    position: absolute;
+    top: 4px;
+    left: 0;
+
+    display: block;
+
+    width: 14px;
+    height: 14px;
+
+    content: '';
+
+    background: #00a0e4;
+}
+
+
+.about_why_choose_us ul b
+{
+    font-weight: 500;
+}
+
+
+
+/*-------------------
+    Main services
+-------------------*/
+.main_services .row
+{
+    align-content: stretch;
+    align-items: stretch;
+
+    margin-bottom: -20px;
+    margin-left: -20px;
+}
+
+
+.main_services .row > *
+{
+    width: calc(50% - 20px);
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+
+.main_services .service
+{
+    display: flex;
+    flex-direction: column;
+
+    min-height: 230px;
+    padding: 18px 28px;
+
+    border: 2px solid #cecece;
+}
+
+
+.main_services .service .name
+{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+.main_services .service .name a
+{
+    display: inline-block;
+
+    vertical-align: top;
+    text-decoration: none;
+
+    color: currentColor;
+}
+
+
+.main_services .service .desc
+{
+    font-size: 18px;
+    font-weight: 300;
+
+    margin-top: 20px;
+}
+
+
+.main_services .service .link
+{
+    margin-top: auto;
+    padding-top: 32px;
+}
+
+
+.main_services .service .link a
+{
+    font-size: 14px;
+
+    display: inline-block;
+
+    padding-bottom: 7px;
+
+    transition: color .2s linear;
+    vertical-align: top;
+    text-decoration: none;
+
+    color: currentColor;
+    border-bottom: 3px solid #00a0e4;
+}
+
+.main_services .service .link a:hover
+{
+    color: #580be4;
+}
+
+
+
+/*-------------------------
+    What is welding jig
+-------------------------*/
+.what_is_welding_jig
+{
+    color: #fff;
+    background: #1b2430;
+}
+
+
+.what_is_welding_jig .row
+{
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.what_is_welding_jig .title
+{
+    font-size: var(--font_size_title);
+    font-weight: 600;
+
+    width: 452px;
+    max-width: 100%;
+}
+
+
+.what_is_welding_jig .desc
+{
+    font-weight: 300;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    width: calc(100% - 472px);
+    padding: 17px 0 17px 28px;
+
+    border-left: 3px solid #00a0e4;
+}
+
+
+
+/*--------------------------
+    Types of welding jig
+--------------------------*/
+.types_welding_jig
+{
+    position: relative;
+}
+
+
+.types_welding_jig .cont
+{
+    position: relative;
+    z-index: 3;
+}
+
+
+.types_welding_jig .bg
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: block;
+
+    width: calc(50% - 10px);
+    height: 100%;
+
+    pointer-events: none;
+
+    object-fit: cover;
+}
+
+
+.types_welding_jig .data
+{
+    width: calc(50% - 18px);
+}
+
+
+.types_welding_jig .data > .title
+{
+    font-size: var(--font_size_title);
+    font-weight: 400;
+
+    margin-bottom: 30px;
+}
+
+
+.types_welding_jig ul li
+{
+    font-size: 18px;
+    font-weight: 300;
+
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    padding-left: 38px;
+
+    list-style-type: none;
+}
+
+
+.types_welding_jig ul li + li
+{
+    margin-top: 18px;
+}
+
+
+.types_welding_jig ul li:before
+{
+    position: absolute;
+    top: 4px;
+    left: 0;
+
+    display: block;
+
+    width: 14px;
+    height: 14px;
+
+    content: '';
+
+    background: #00a0e4;
+}
+
+
+.types_welding_jig ul li b
+{
+    font-weight: 500;
+}
+
+
+.types_welding_jig .desc
+{
+    font-size: 18px;
+
+    margin-top: 32px;
+}
+
+
+.types_welding_jig .desc > * + *
+{
+    margin-top: 18px;
+}
+
+
+
+/*--------------------------
+    Benefits welding jig
+--------------------------*/
+.benefits_welding_jig .row
+{
+    align-content: stretch;
+    align-items: stretch;
+
+    margin-bottom: -20px;
+    margin-left: -20px;
+
+    counter-reset: number;
+}
+
+
+.benefits_welding_jig .row > *
+{
+    width: calc(33.333% - 20px);
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+
+.benefits_welding_jig .item
+{
+    position: relative;
+
+    margin-top: 30px;
+    padding: 51px 28px;
+
+    text-align: center;
+
+    border: 2px solid #cecece;
+}
+
+
+.benefits_welding_jig .item .number
+{
+    font-size: 18px;
+    font-weight: 500;
+
+    position: absolute;
+    top: -32px;
+    right: 0;
+    left: 0;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+
+    color: #fff;
+    background: #00a0e4;
+}
+
+
+.benefits_welding_jig .item .number:before
+{
+    content: counter(number, decimal-leading-zero);
+    counter-increment: number;
+}
+
+
+.benefits_welding_jig .item .name
+{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+.benefits_welding_jig .item .desc
+{
+    font-size: 14px;
+    font-weight: 300;
+
+    margin-top: 18px;
+}
+
+
+
+/*-----------------------------
+    What is welding fixture
+-----------------------------*/
+.what_is_welding_fixture
+{
+    color: #fff;
+    background: #1b2430;
+}
+
+
+.what_is_welding_fixture .row
+{
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.what_is_welding_fixture .title
+{
+    font-size: var(--font_size_title);
+    font-weight: 600;
+
+    width: 452px;
+    max-width: 100%;
+}
+
+
+.what_is_welding_fixture .desc
+{
+    font-weight: 300;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    width: calc(100% - 472px);
+    padding: 17px 0 17px 28px;
+
+    border-left: 3px solid #00a0e4;
+}
+
+
+
+/*--------------------------------
+    Advantages welding fixture
+--------------------------------*/
+.advantages_welding_fixture
+{
+    position: relative;
+}
+
+
+.advantages_welding_fixture .cont
+{
+    position: relative;
+    z-index: 3;
+}
+
+
+.advantages_welding_fixture .bg
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: block;
+
+    width: calc(50% - 10px);
+    min-width: 200px;
+    height: 100%;
+
+    pointer-events: none;
+
+    object-fit: cover;
+}
+
+
+.advantages_welding_fixture .data
+{
+    width: calc(50% - 10px);
+}
+
+
+.advantages_welding_fixture .data > * + *
+{
+    margin-top: 32px;
+}
+
+
+.advantages_welding_fixture .icon img
+{
+    display: block;
+
+    width: 64px;
+    height: 64px;
+}
+
+
+.advantages_welding_fixture .title
+{
+    font-size: var(--font_size_title);
+    font-weight: 400;
+}
+
+
+.advantages_welding_fixture .desc
+{
+    font-size: 18px;
+    font-weight: 300;
+}
+
+
+.advantages_welding_fixture .desc > * + *
+{
+    margin-top: 18px;
+}
+
+
+.advantages_welding_fixture .link a
+{
+    font-size: 14px;
+
+    display: inline-block;
+
+    padding: 10px 14px;
+
+    transition: background .2s linear;
+    vertical-align: top;
+    text-decoration: none;
+
+    color: #fff;
+    background: #00a0e4;
+}
+
+.advantages_welding_fixture .link a:hover
+{
+    background: #580be4;
+}
+
+
+
+/*--------------------------------------------
+    Choosing the right fixturing equipment
+--------------------------------------------*/
+.choosing_right_fixturing_equipment .cont > .title
+{
+    font-size: var(--font_size_title);
+    font-weight: 400;
+}
+
+
+.choosing_right_fixturing_equipment .row
+{
+    margin-top: 60px;
+    margin-bottom: -30px;
+    margin-left: -30px;
+}
+
+
+.choosing_right_fixturing_equipment .row > *
+{
+    width: calc(50% - 30px);
+    margin-bottom: 30px;
+    margin-left: 30px;
+}
+
+
+.choosing_right_fixturing_equipment .item .name
+{
+    font-size: var(--font_size_title);
+    font-weight: 600;
+
+    color: #00a0e4;
+}
+
+
+.choosing_right_fixturing_equipment .item .desc
+{
+    font-size: 18px;
+    font-weight: 300;
+
+    margin-top: 18px;
+}
+
+
+.choosing_right_fixturing_equipment .notice
+{
+    font-size: 18px;
+
+    margin-top: 60px;
+    padding: 30px 40px;
+
+    background: #d6d6d6;
+}
+
+
+
+.choosing_right_fixturing_equipment .message
+{
+    font-size: var(--font_size_title);
+
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin-top: 32px;
+    padding: 28px 31px 27px 40px;
+
+    color: #fff;
+    background: #00a0e4;
+}
+
+
+.choosing_right_fixturing_equipment .message .icon
+{
+    display: block;
+
+    width: 104px;
+    height: 104px;
+}
+
+
+.choosing_right_fixturing_equipment .message .icon + *
+{
+    align-self: center;
+
+    width: calc(100% - 153px);
+}
+
+
+
+/*---------------------------------
+    What is reverse engineering
+---------------------------------*/
+.what_is_reverse_engineering
+{
+    color: #fff;
+    background: #1b2430;
+}
+
+
+.what_is_reverse_engineering .row
+{
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.what_is_reverse_engineering .title
+{
+    font-size: var(--font_size_title);
+    font-weight: 600;
+
+    width: 452px;
+    max-width: 100%;
+}
+
+
+.what_is_reverse_engineering .desc
+{
+    font-weight: 300;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    width: calc(100% - 472px);
+    padding: 17px 0 17px 28px;
+
+    border-left: 3px solid #00a0e4;
+}
+
+
+
+/*----------------------------------
+    Where is reverse engineering
+----------------------------------*/
+.where_is_reverse_engineering
+{
+    position: relative;
+}
+
+
+.where_is_reverse_engineering .cont
+{
+    position: relative;
+    z-index: 3;
+}
+
+
+.where_is_reverse_engineering .bg
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: block;
+
+    width: calc(50% - 10px);
+    min-width: 200px;
+    height: 100%;
+
+    pointer-events: none;
+
+    object-fit: cover;
+}
+
+
+.where_is_reverse_engineering .block_head
+{
+    width: calc(50% - 18px);
+    margin-bottom: 0;
+}
+
+
+
+/*--------------------------------
+    Schema reverse engineering
+--------------------------------*/
+.schema_reverse_engineering
+{
+    color: #fff;
+    background: #00a0e4;
+}
+
+
+.schema_reverse_engineering .row
+{
+    align-content: stretch;
+    align-items: stretch;
+
+    margin-bottom: -20px;
+    margin-left: -20px;
+}
+
+
+.schema_reverse_engineering .row > *
+{
+    width: calc(20% - 20px);
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+
+.schema_reverse_engineering .item
+{
+    font-weight: 500;
+
+    position: relative;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    height: 130px;
+    padding: 10px;
+
+    text-align: center;
+
+    border: 2px solid #fff;
+}
+
+
+.schema_reverse_engineering .big_arrow
+{
+    position: absolute;
+    bottom: 50%;
+    left: 100%;
+
+    width: calc(50% + 22px);
+    height: 50%;
+    margin-left: 2px;
+
+    pointer-events: none;
+
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+}
+
+
+.schema_reverse_engineering .item .arrow
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 100%;
+
+    display: block;
+
+    width: 28px;
+    height: 28px;
+    margin: auto 0 auto -2px;
+
+    transform: rotate(180deg);
+    pointer-events: none;
+}
+
+
+.schema_reverse_engineering .item .arrow.down
+{
+    top: 100%;
+    right: 0;
+    bottom: auto;
+    left: 0;
+
+    margin: -2px auto 0;
+
+    transform: rotate(-90deg);
+}
+
+
+.schema_reverse_engineering .big_arrow .arrow
+{
+    top: -24px;
+    right: -15px;
+    bottom: auto;
+    left: auto;
+
+    margin: 0;
+
+    transform: rotate(90deg);
+}
+
+
+
+/*--------------------------------
+    Equipment amd technologies
+--------------------------------*/
+.equipment_technologies
+{
+    position: relative;
+}
+
+
+.equipment_technologies .cont
+{
+    position: relative;
+    z-index: 3;
+}
+
+
+.equipment_technologies .bg
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: block;
+
+    width: calc(50% - 10px);
+    min-width: 200px;
+    height: 100%;
+
+    pointer-events: none;
+
+    object-fit: cover;
+}
+
+
+.equipment_technologies .data
+{
+    width: calc(50% - 18px);
+}
+
+
+.equipment_technologies .data > * + *
+{
+    margin-top: 32px;
+}
+
+
+.equipment_technologies .data > .title
+{
+    font-size: var(--font_size_title);
+    font-weight: 400;
+}
+
+
+.equipment_technologies .desc
+{
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.equipment_technologies .desc > * + *
+{
+    margin-top: 18px;
+}
+
+
+.equipment_technologies ul
+{
+    margin-top: 32px;
+}
+
+
+.equipment_technologies ul li
+{
+    font-size: 18px;
+    font-weight: 300;
+
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    padding-left: 38px;
+
+    list-style-type: none;
+}
+
+
+.equipment_technologies ul li + li
+{
+    margin-top: 18px;
+}
+
+
+.equipment_technologies ul li:before
+{
+    position: absolute;
+    top: 4px;
+    left: 0;
+
+    display: block;
+
+    width: 14px;
+    height: 14px;
+
+    content: '';
+
+    background: #00a0e4;
+}
+
+
+.equipment_technologies ul li b
+{
+    font-weight: 500;
+}
+
+
+
+/*----------------------------------
+    Benefits reverse engineering
+----------------------------------*/
+.benefits_reverse_engineering .grid
+{
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+}
+
+
+.benefits_reverse_engineering .item.border
+{
+    padding: 19px;
+
+    border: 1px solid #00a0e4;
+
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+}
+
+
+.benefits_reverse_engineering .item .name
+{
+    font-size: var(--font_size_title);
+    font-weight: 600;
+
+    color: #00a0e4;
+}
+
+
+.benefits_reverse_engineering .item .desc
+{
+    font-size: 18px;
+    font-weight: 300;
+
+    margin-top: 18px;
+}
+
+
+.benefits_reverse_engineering .item .desc > * + *
+{
+    margin-top: 18px;
+}
+
+
+
+/*----------------------------------
+    What is an aggregate_machine
+----------------------------------*/
+.what_is_aggregate_machine
+{
+    color: #fff;
+    background: #1b2430;
+}
+
+
+.what_is_aggregate_machine .row
+{
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.what_is_aggregate_machine .title
+{
+    font-size: var(--font_size_title);
+    font-weight: 600;
+
+    width: 452px;
+    max-width: 100%;
+}
+
+
+.what_is_aggregate_machine .desc
+{
+    font-weight: 300;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    width: calc(100% - 472px);
+    padding: 17px 0 17px 28px;
+
+    border-left: 3px solid #00a0e4;
+}
+
+
+
+/*-----------------------------------
+    Process of aggregate machines
+-----------------------------------*/
+.process_aggregate_machines .cont > .title
+{
+    font-size: var(--font_size_title);
+    font-weight: 400;
+
+    width: 602px;
+    max-width: 100%;
+    margin-bottom: 60px;
+}
+
+
+.process_aggregate_machines .row
+{
+    align-content: stretch;
+    align-items: stretch;
+
+    margin-bottom: -20px;
+    margin-left: -20px;
+}
+
+
+.process_aggregate_machines .row > *
+{
+    width: calc(33.333% - 20px);
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+
+.process_aggregate_machines .item
+{
+    position: relative;
+
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    margin-top: 30px;
+    padding: 51px 28px;
+
+    text-align: center;
+
+    border: 2px solid #cecece;
+}
+
+
+.process_aggregate_machines .item .icon
+{
+    position: absolute;
+    top: -32px;
+    right: 0;
+    left: 0;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+
+    background: #00a0e4;
+}
+
+
+.process_aggregate_machines .item .icon img
+{
+    display: block;
+
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+.process_aggregate_machines .item .name
+{
+    font-size: 18px;
+    font-weight: 500;
+
+    width: 100%;
+}
+
+
+.process_aggregate_machines .item .desc
+{
+    font-size: 14px;
+    font-weight: 300;
+
+    width: 100%;
+    margin-top: 17px;
+}
+
+
+
+.process_aggregate_machines .message
+{
+    font-size: var(--font_size_title);
+
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin-top: 32px;
+    padding: 28px 31px 27px 40px;
+
+    color: #fff;
+    background: #00a0e4;
+}
+
+
+.process_aggregate_machines .message .icon
+{
+    display: block;
+
+    width: 104px;
+    height: 104px;
+}
+
+
+.process_aggregate_machines .message .icon + *
+{
+    align-self: center;
+
+    width: calc(100% - 153px);
+}
+
+
+.process_aggregate_machines .message .icon + * > * + *
+{
+    margin-top: 18px;
+}
+
+
+
+/*--------------------------------
+    Technological capabilities
+--------------------------------*/
+.technological_capabilities .cont > .title
+{
+    font-size: var(--font_size_title);
+    font-weight: 400;
+
+    width: 602px;
+    max-width: 100%;
+    margin-bottom: 30px;
+}
+
+
+
+.technological_capabilities .row
+{
+    margin-bottom: -30px;
+    margin-left: -30px;
+}
+
+
+.technological_capabilities .row > *
+{
+    width: calc(50% - 30px);
+    margin-bottom: 30px;
+    margin-left: 30px;
+}
+
+
+.technological_capabilities .item
+{
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+
+.technological_capabilities .item .icon
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 30px;
+    height: 30px;
+}
+
+
+.technological_capabilities .item .icon img
+{
+    display: block;
+
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+.technological_capabilities .item .name
+{
+    font-size: var(--font_size_title);
+    font-weight: 600;
+
+    align-self: center;
+
+    width: calc(100% - 50px);
+    margin-left: auto;
+}
+
+
+.technological_capabilities .item .desc
+{
+    font-size: 18px;
+    font-weight: 300;
+
+    margin-top: 18px;
+}
+
+
+
+.technological_capabilities .message
+{
+    font-size: var(--font_size_title);
+
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin-top: 32px;
+    padding: 28px 31px 27px 40px;
+
+    color: #fff;
+    background: #00a0e4;
+}
+
+
+.technological_capabilities .message .icon
+{
+    display: block;
+
+    width: 104px;
+    height: 104px;
+}
+
+
+.technological_capabilities .message .icon + *
+{
+    align-self: center;
+
+    width: calc(100% - 153px);
+}
+
+
+
+/*--------------
+    Warranty
+--------------*/
+.warranty .section + .section
+{
+    margin-top: 32px;
+}
+
+
+.warranty .section .title
+{
+    font-size: var(--font_size_title);
+    font-weight: 500;
+
+    margin-bottom: 32px;
+}
+
+
+.warranty .row
+{
+    align-content: stretch;
+    align-items: stretch;
+
+    margin-bottom: -20px;
+    margin-left: -20px;
+}
+
+
+.warranty .row > *
+{
+    width: calc(25% - 20px);
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+
+.warranty .row > *.big
+{
+    width: calc(50% - 20px);
+}
+
+
+.warranty .item
+{
+    padding: 50px 28px 38px;
+
+    text-align: center;
+
+    border: 2px solid #cecece;
+}
+
+.warranty .item.big
+{
+    padding: 54px 28px 52px;
+}
+
+
+.warranty .item .name
+{
+    font-size: 18px;
+    font-weight: 600;
+
+    width: 340px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+
+.warranty .item .desc
+{
+    font-size: 14px;
+    font-weight: 300;
+
+    width: 340px;
+    max-width: 100%;
+    margin: 18px auto 0;
+}
+
+
+.warranty .message
+{
+    font-size: var(--font_size_title);
+
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin-top: 32px;
+    padding: 28px 31px 27px 40px;
+
+    color: #fff;
+    background: #00a0e4;
+}
+
+
+.warranty .message .icon
+{
+    display: block;
+
+    width: 104px;
+    height: 104px;
+}
+
+
+.warranty .message .icon + *
+{
+    align-self: center;
+
+    width: calc(100% - 153px);
+}
+
+
+
+/*---------------------------
+    Modular machine tools
+---------------------------*/
+.modular_machine_tools
+{
+    position: relative;
+}
+
+
+.modular_machine_tools .cont
+{
+    position: relative;
+}
+
+
+.modular_machine_tools .bg
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: block;
+
+    width: calc(50% - 10px);
+    min-width: 200px;
+    height: 100%;
+
+    pointer-events: none;
+
+    object-fit: cover;
+}
+
+
+.modular_machine_tools .data
+{
+    width: calc(50% - 18px);
+}
+
+
+.modular_machine_tools .data > * + *
+{
+    margin-top: 32px;
+}
+
+
+.modular_machine_tools .data > .title
+{
+    font-size: var(--font_size_title);
+    font-weight: 500;
+
+    color: #00a0e4;
+}
+
+
+.modular_machine_tools .desc
+{
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.modular_machine_tools .desc > * + *
+{
+    margin-top: 18px;
+}
+
+
+.modular_machine_tools ul
+{
+    margin-top: 32px;
+}
+
+
+.modular_machine_tools ul li
+{
+    font-size: 18px;
+    font-weight: 300;
+
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    padding-left: 38px;
+
+    list-style-type: none;
+}
+
+
+.modular_machine_tools ul li + li
+{
+    margin-top: 18px;
+}
+
+
+.modular_machine_tools ul li:before
+{
+    position: absolute;
+    top: 4px;
+    left: 0;
+
+    display: block;
+
+    width: 14px;
+    height: 14px;
+
+    content: '';
+
+    background: #00a0e4;
+}
+
+
+.modular_machine_tools ul li b
+{
+    font-weight: 500;
+}
+
+
+
+/*---------------------------------------
+    Linear type modular machine tools
+---------------------------------------*/
+.linear_type_modular_machine_tools
+{
+    position: relative;
+
+    color: #fff;
+}
+
+
+.linear_type_modular_machine_tools:before
+{
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    content: '';
+
+    background: rgba(0,0,0,.54);
+}
+
+
+.linear_type_modular_machine_tools .cont
+{
+    position: relative;
+    z-index: 3;
+}
+
+
+.linear_type_modular_machine_tools .bg
+{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    object-fit: cover;
+}
+
+
+.linear_type_modular_machine_tools .title
+{
+    font-size: var(--font_size_title);
+    font-weight: 600;
+
+    text-align: center;
+}
+
+
+.linear_type_modular_machine_tools .desc
+{
+    font-size: 18px;
+    font-weight: 300;
+
+    margin-top: 24px;
+
+    text-align: center;
+}
+
+
+.linear_type_modular_machine_tools .desc > * + *
+{
+    margin-top: 18px;
+}
+
+
+
 /*------------
     Footer
 ------------*/
@@ -4837,4 +7936,63 @@ footer .privacy_policy_link a
     text-decoration: none;
 
     color: currentColor;
+}
+
+
+
+/*-----------
+    PopUp
+-----------*/
+.modal
+{
+    display: none;
+    visibility: visible !important;
+
+    width: 609px;
+    max-width: 100%;
+    padding: 60px 48px;
+
+    color: var(--text_color);
+    background: #fff;
+}
+
+
+.modal_title
+{
+    font-size: var(--font_size_title);
+    font-weight: 600;
+
+    text-align: center;
+}
+
+
+.modal_desc
+{
+    font-size: 18px;
+    font-weight: 300;
+
+    margin-top: 20px;
+
+    text-align: center;
+}
+
+
+.modal .close_btn
+{
+    font-size: 14px;
+
+    display: block;
+
+    margin: 80px auto 0;
+    padding-bottom: 7px;
+
+    transition: color .2s linear;
+
+    border-bottom: 3px solid #00a0e4;
+}
+
+
+.modal .close_btn:hover
+{
+    color: #580be4;
 }
