@@ -3455,19 +3455,6 @@ header .phone .icon
 /*------------------
     Testimonials
 ------------------*/
-.testimonials
-{
-    position: relative;
-}
-
-
-.testimonials .cont
-{
-    position: relative;
-    z-index: 3;
-}
-
-
 .testimonials .block_head
 {
     margin-bottom: 0;
@@ -3477,22 +3464,6 @@ header .phone .icon
 .testimonials .block_head .desc
 {
     width: 746px;
-}
-
-
-.testimonials .bg
-{
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    right: 50%;
-
-    display: block;
-
-    height: 100%;
-    margin-right: -620px;
-
-    pointer-events: none;
 }
 
 
